@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://koleeum.immo" target="_blank">Koleeum.immo V2 in NextJS!</a>
+          Welcome to <a href="https://koleeum.immo" target="_blank" rel="noreferrer">Koleeum.immo V2 in NextJS!</a>
         </h1>
 
         <p className={styles.description}>
