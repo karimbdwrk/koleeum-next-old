@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
 
-export default function Home(props) {
+export default function Investisseurs(props) {
 
-  const [home, setHome] = useState(props.home)
+  const [data, setData] = useState(props.data)
 
   return (
     <div className="homepage">
@@ -14,19 +14,19 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="hero">
-        <h2>{home.hero.title}</h2>
+        <h2>{data.title}</h2>
       </div>
     </div>
   )
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('https://koleeum-admin.herokuapp.com/home')
-  const home = await res.json()
+  const res = await fetch('https://koleeum-admin.herokuapp.com/proprietaires')
+  const data = await res.json()
 
   return {
     props: {
-      home
+      data
     }
   }
 }
