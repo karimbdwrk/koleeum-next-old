@@ -1,8 +1,16 @@
+$blue : #4270ED;
+
 #wesh {
     display: block;
     .morray {
         display: none;
     }
+}
+
+.btn-primary {
+    background-color: $blue;
+    border-radius: 25px;
+    padding: 8px 25px;
 }
 
 body {
@@ -15,10 +23,16 @@ body {
 header {
     display: flex;
     flex-direction: row;
+    height: 75px;
+    padding: 15px;
 
     .logo-container {
         width: 20%;
         height: 100%;
+
+        img {
+            max-height: 100%;
+        }
     }
 
     .nav-container {
@@ -30,6 +44,7 @@ header {
         nav {
             display: flex;
             justify-content: space-around;
+            align-items: center;
             width: 100%;
         }
     }
@@ -38,6 +53,6 @@ header {
         width: 20%;
         height: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-end;
     }
 }

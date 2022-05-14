@@ -5,6 +5,12 @@
   display: none;
 }
 
+.btn-primary {
+  background-color: #4270ED;
+  border-radius: 25px;
+  padding: 8px 25px;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -15,10 +21,15 @@ body {
 header {
   display: flex;
   flex-direction: row;
+  height: 75px;
+  padding: 15px;
 }
 header .logo-container {
   width: 20%;
   height: 100%;
+}
+header .logo-container img {
+  max-height: 100%;
 }
 header .nav-container {
   width: 60%;
@@ -29,11 +40,12 @@ header .nav-container {
 header .nav-container nav {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 100%;
 }
 header .login-container {
   width: 20%;
   height: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
