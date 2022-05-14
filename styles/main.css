@@ -7,4 +7,33 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+}
+header .logo-container {
+  width: 20%;
+  height: 100%;
+}
+header .nav-container {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+header .nav-container nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+header .login-container {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
