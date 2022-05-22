@@ -2,7 +2,8 @@
   "name": "koleeum-next",
   "private": true,
   "engines": {
-    "node": "16.x"
+    "node": "16.x",
+    "npm": "8.x"
   },
   "scripts": {
     "dev": "next dev",
