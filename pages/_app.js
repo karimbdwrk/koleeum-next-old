@@ -1,8 +1,9 @@
 import { useState, useEffect, useLayoutEffect } from 'react'
 import Link from 'next/link'
 import Layout from './layout'
-import { Button } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import Header from '../sections/globals/header'
+import Footer from '../sections/globals/footer'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.css'
 import '../styles/main.css'
 
@@ -29,24 +30,11 @@ function MyApp({ Component, pageProps }) {
 
   return ( 
     <>
-      <header>
-        <div className="logo-container">
-          <Link href="./"><a><img src={data.header.logo.url} /></a></Link>
-        </div>
-        <div className="nav-container">
-          <nav>
-            {data.header.navigation.map( function (nav) {
-              return ( <Link key={nav.id} href={nav.link}><a>{nav.title}</a></Link> )
-            })}
-          </nav>
-        </div> 
-        <div className="login-container">
-          <Button>Espace clients</Button>  
-        </div>     
-      </header>
+      <Header />
       <Layout>
         <Component {...pageProps} />
       </Layout>
+      <Footer />
     </>
   )
 }
