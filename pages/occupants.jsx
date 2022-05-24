@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
+import Image from 'next/image'
 import Link from 'next/link'
 import Markdown from 'markdown-to-jsx'
 import RegistrationForm from '../sections/components/registration-form'
@@ -23,6 +24,11 @@ export default function Investisseurs(props) {
                 {data.page_sections.map((section) =>
                     <div key={section.id} className="section">
                         <div className="image">
+                            {/* <Image
+                                src={section.image.url}
+                                alt="Hero illustration"
+                                layout="fill"
+                            /> */}
                             <img src={section.image.url} />
                         </div>
                         <div className="txt-content">
@@ -34,7 +40,12 @@ export default function Investisseurs(props) {
             </div>
             <div className="choose-us">
                 <div className="container">
-                    <div className="image">
+                    <div className="image">            
+                        {/* <Image
+                            src={data.choose_us.image.url}
+                            alt="Hero illustration"
+                            layout="fill"
+                        /> */}
                         <img src={data.choose_us.image.url} />
                     </div>
                     <div className="text-content">
@@ -43,7 +54,12 @@ export default function Investisseurs(props) {
                         <div className="sections">
                             {data.choose_us.card.map((card) =>
                                 <div key={card.id} className="section">
-                                    <div className="icon">
+                                    <div className="icon">           
+                                        {/* <Image
+                                            src={card.icon.url}
+                                            alt="Hero illustration"
+                                            layout="fill"
+                                        /> */}
                                         <img src={card.icon.url} />
                                     </div>
                                     <div className="txt-content">
