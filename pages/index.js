@@ -24,7 +24,13 @@ export default function Home(props) {
             <button className="btn">{home.hero.button.title}</button>
           </div>
           <div className="image">
-            <img src={home.hero.image.url} />
+            {/* <img src={home.hero.image.url} /> */}
+            <Image
+              src={home.hero.image.url}
+              alt="Hero illustration"
+              width={550}
+              height={550}
+            />
           </div>
         </div>
         <div className="container">

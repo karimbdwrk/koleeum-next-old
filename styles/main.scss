@@ -437,10 +437,15 @@ body {
                     justify-content: center;
                     align-items: flex-end;
 
-                    img {
-                        justify-self: flex-end;
-                        max-height: 550px;
-                        width: auto;
+                    span {
+                        max-width: 100%;
+                        max-height: 100%;
+
+                        img {
+                            justify-self: flex-end;
+                            max-height: 550px;
+                            width: auto;
+                        }
                     }
 
                 }
