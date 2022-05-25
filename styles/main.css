@@ -5,6 +5,10 @@
   display: block;
 }
 
+.title {
+  font-weight: 700;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -239,14 +243,12 @@ body {
   min-height: 100vh;
 }
 #__next #header {
-  padding: 30px 15px;
   position: fixed;
   top: 0;
   z-index: 99;
   background-color: #FFFFFF;
-}
-#__next #header .logo {
-  width: 20%;
+  width: 100vw;
+  padding: 15px 0;
 }
 #__next #header .logo img {
   height: 50px;
@@ -274,10 +276,11 @@ body {
 }
 #__next #header .login-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+  align-items: center;
 }
 #__next #header .login-container .btn {
-  width: 100%;
+  height: max-content;
 }
 #__next .layout {
   min-height: 100vh;
@@ -327,6 +330,7 @@ body {
 }
 #__next .hero .container > div.txt-content .title {
   font-size: 48px;
+  font-weight: 700;
 }
 #__next .hero .container > div.txt-content .description {
   font-size: 24px;
@@ -377,6 +381,7 @@ body {
 #__next .expertises .container > .title {
   text-align: center;
   font-size: 42px;
+  font-weight: 700;
 }
 #__next .expertises .container > .description {
   text-align: center;
@@ -394,18 +399,18 @@ body {
   border: 1px solid #EEE;
   border-radius: 30px;
   padding: 30px 15px;
-  height: 300px;
+  height: 365px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
-  width: 20%;
+  width: 24%;
 }
 #__next .expertises .container .cards .card:last-of-type {
   margin-right: 0;
 }
 #__next .expertises .container .cards .card .icon {
-  border-radius: 50%;
+  border-radius: 30px;
   height: 60px;
   width: 60px;
   margin-bottom: 0px;
@@ -413,6 +418,7 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 5px #00000022;
+  min-height: 60px;
 }
 #__next .expertises .container .cards .card .icon img {
   height: 30px;
@@ -423,6 +429,7 @@ body {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 20px;
+  margin-top: 15px;
 }
 #__next .expertises .container .cards .card .description {
   font-size: 20px;
@@ -553,6 +560,7 @@ body {
 #__next .title-actu {
   width: 100%;
   font-size: 48px;
+  font-weight: 700;
   text-align: center;
   margin-top: 90px;
 }
@@ -574,6 +582,7 @@ body {
   font-size: 42px;
   margin-top: 0;
   margin-bottom: 20px;
+  font-weight: 700;
 }
 #__next .newsletter .container .description {
   text-align: center;
@@ -638,10 +647,11 @@ body {
 }
 #__next footer.footer .container .logo {
   max-width: 200px;
-  margin-top: 15px;
+  margin-top: 0px;
 }
 #__next footer.footer .container .logo img {
   width: 150px;
+  margin-bottom: 30px;
 }
 #__next footer.footer .container .logo .logo-address {
   font-size: 14px;
@@ -752,6 +762,7 @@ body {
 }
 #__next footer.footer .container:last-of-type .copyright {
   font-size: 14px;
+  margin-top: 30px;
 }
 #__next .proprietaires {
   display: flex;
@@ -769,11 +780,12 @@ body {
 #__next .proprietaires .container > .title {
   font-size: 42px;
   text-align: center;
+  margin-bottom: 30px;
 }
 #__next .proprietaires .container > .description {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
-  width: 66%;
+  width: 67%;
 }
 #__next .proprietaires .container .sections {
   display: flex;
@@ -822,7 +834,7 @@ body {
   padding-top: 50px;
 }
 #__next .proprietaires .container .sections .section.first-section .cards .card {
-  width: calc(30% - 30px);
+  width: 32%;
 }
 #__next .proprietaires .container .sections .section.first-section .cards .card .txt-content {
   width: 100%;
@@ -843,11 +855,11 @@ body {
 }
 #__next .proprietaires .container .sections .section > .txt-content > .title {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 #__next .proprietaires .container .sections .section > .txt-content > .description {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -942,8 +954,8 @@ body {
 }
 #__next .proprietaires .container .garanties .title {
   font-size: 32px;
-  font-weight: 600;
-  margin-bottom: 0px;
+  font-weight: 700;
+  margin-bottom: 30px;
 }
 #__next .proprietaires .container .garanties .description {
   font-size: 18px;
@@ -983,9 +995,10 @@ body {
 #__next .locataires .container > .title {
   font-size: 42px;
   text-align: center;
+  margin-bottom: 30px;
 }
 #__next .locataires .container > .description {
-  font-size: 18px;
+  font-size: 20px;
   text-align: center;
   width: 66%;
 }
@@ -1023,11 +1036,11 @@ body {
 }
 #__next .locataires .container > .sections .section .txt-content .title {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 #__next .locataires .container > .sections .section .txt-content .description {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -1055,13 +1068,13 @@ body {
 }
 #__next .locataires .container .choose-us .container .text-content > .title {
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 20px;
 }
 #__next .locataires .container .choose-us .container .text-content > .description {
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 #__next .locataires .container .choose-us .container .text-content > .description p {
   margin: 0;
@@ -1121,9 +1134,18 @@ body {
 #__next .about-us .container > .title {
   font-size: 42px;
   text-align: center;
+  font-weight: 700;
+}
+#__next .about-us .container > .text-content {
+  padding-top: 60px;
 }
 #__next .about-us .container > .text-content .paragraphe {
   font-size: 18px;
+}
+#__next .about-us .container > .text-content .paragraphe h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 50px 0 25px;
 }
 #__next .about-us .container .image {
   width: 100%;
@@ -1158,15 +1180,22 @@ body {
   justify-content: center;
   align-items: center;
 }
-#__next .blog .container > .title {
+#__next .blog .container .row {
+  width: 100%;
+}
+#__next .blog .container .row .col-12 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#__next .blog .container .row .col-12 > .title {
   font-size: 42px;
   text-align: center;
   margin-bottom: 0;
 }
-#__next .blog .container > .description {
+#__next .blog .container .row .col-12 > .description {
   font-size: 18px;
   text-align: center;
-  width: 66%;
   margin-bottom: 90px;
 }
 #__next .blog .container .cards {
@@ -1188,6 +1217,7 @@ body {
   overflow: hidden;
   position: relative;
   height: 350px;
+  min-height: 350px;
 }
 #__next .blog .container .cards .card .card-thumbnail img {
   min-width: 100%;
@@ -1197,7 +1227,10 @@ body {
   position: absolute;
 }
 #__next .blog .container .cards .card .card-txt {
-  padding: 15px 15px 90px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  min-height: 350px;
 }
 #__next .blog .container .cards .card .card-txt .link {
   color: #171E49;
@@ -1205,9 +1238,17 @@ body {
 }
 #__next .blog .container .cards .card .card-txt .card-title {
   font-size: 22px;
+  margin: 15px 0;
+  font-weight: 600;
 }
 #__next .blog .container .cards .card .card-txt .card-description {
-  font-size: 14px;
+  font-size: 15px;
+}
+#__next .blog .container .cards .card .card-txt .btn {
+  position: absolute;
+  bottom: 15px;
+  align-self: flex-end;
+  justify-self: flex-end;
 }
 #__next .post {
   display: flex;
@@ -1327,7 +1368,7 @@ body {
   padding: 50px;
   border: 1px solid #eee;
   border-radius: 30px;
-  width: 80%;
+  max-width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1649,6 +1690,18 @@ body {
 }
 #monsitemedia_social_wall.show > .widget-wrapper .pagination a {
   border: 0px;
+}
+
+.modal-blog .modal-dialog .modal-content .modal-header .modal-title {
+  font-weight: 600;
+}
+.modal-blog .modal-dialog .modal-content .modal-body img {
+  max-width: 100%;
+  margin-bottom: 45px;
+}
+.modal-blog .modal-dialog .modal-content .modal-body .post-date {
+  float: right;
+  font-weight: 600;
 }
 
 .CookieConsent {

@@ -26,7 +26,7 @@ export default function Investisseurs(props) {
                         <img src={data.first_section.image.url} />
                     </div>
                     <div className="txt-content">
-                        <h1 className="title">{data.first_section.title}</h1>
+                        <h2 className="title">{data.first_section.title}</h2>
                         <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.first_section.description}</Markdown>
                     </div>
                     <div className="cards">

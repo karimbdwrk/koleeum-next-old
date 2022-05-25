@@ -5,6 +5,10 @@
     } 
 }
 
+.title {
+    font-weight: 700;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -307,14 +311,15 @@ body {
     min-height: 100vh;
 
     #header {
-        padding: 30px 15px;
         position: fixed;
         top: 0;
         z-index: 99;
         background-color: #FFFFFF;
+        width: 100vw;
+        padding: 15px 0;
 
             .logo {
-                width: 20%;
+
                 img {
                     height: 50px;
                     width: auto;
@@ -347,10 +352,11 @@ body {
 
             .login-container {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-end;
+                align-items: center;
 
                 .btn {
-                    width: 100%;
+                    height: max-content;
                 }
             }
 
@@ -407,6 +413,7 @@ body {
                     .title {
                         font-size: 48px;
                         // margin-top: 90px;
+                        font-weight: 700;
                     }
     
                     .description {
@@ -474,6 +481,7 @@ body {
             & > .title {
                 text-align: center;
                 font-size: 42px;
+                font-weight: 700;
             }
 
             & > .description {
@@ -493,20 +501,20 @@ body {
                     border: 1px solid #EEE;
                     border-radius: 30px;
                     padding: 30px 15px;
-                    height: 300px;
+                    height: 365px;
                     // margin-right: 60px;
                     display: flex;
-                    justify-content: center;
+                    justify-content: flex-start;
                     flex-direction: column;
                     align-items: center;
-                    width: 20%;
+                    width: 24%;
 
                     &:last-of-type {
                         margin-right: 0;
                     }
 
                     .icon {
-                        border-radius: 50%;
+                        border-radius: 30px;
                         // padding: 15px;
                         height: 60px;
                         width: 60px;
@@ -515,6 +523,7 @@ body {
                         justify-content: center;
                         align-items: center;
                         box-shadow: 2px 2px 5px #00000022;
+                        min-height: 60px;
 
                         img {
                             height: 30px;
@@ -527,6 +536,7 @@ body {
                         font-size: 22px;
                         font-weight: 600;
                         margin-bottom: 20px;
+                        margin-top: 15px;
                     }
 
                     .description {
@@ -692,6 +702,7 @@ body {
     .title-actu {
         width: 100%;
         font-size: 48px;
+        font-weight: 700;
         text-align: center;
         margin-top: 90px;
     }
@@ -715,6 +726,7 @@ body {
                 font-size: 42px;
                 margin-top: 0;
                 margin-bottom: 20px;
+                font-weight: 700;
             }
             .description {
                 text-align: center;
@@ -793,10 +805,11 @@ body {
 
             .logo {
                 max-width: 200px;
-                margin-top: 15px;
+                margin-top: 0px;
 
                 img {
                     width: 150px;
+                    margin-bottom: 30px;
                 }
 
                 .logo-address {
@@ -940,6 +953,7 @@ body {
 
                 .copyright {
                     font-size: 14px;
+                    margin-top: 30px;
                 }
             }
         }
@@ -963,12 +977,14 @@ body {
             & > .title {
                 font-size: 42px;
                 text-align: center;
+                margin-bottom: 30px;
             }
 
             & > .description {
-                font-size: 18px;
+                font-size: 20px;
                 text-align: center;
-                width: 66%;
+                width: 67%;
+                // max-width: 725px;
             }
 
             .sections {
@@ -1025,7 +1041,7 @@ body {
                             padding-top: 50px;
 
                             .card {
-                                width: calc(30% - 30px);
+                                width: 32%;
 
                                 .txt-content {
                                     width: 100%;
@@ -1050,11 +1066,11 @@ body {
                         padding: 0 30px;
                         &>.title {
                             font-size: 32px;
-                            font-weight: 600;
+                            font-weight: 700;
                             margin-bottom: 20px;
                         }
                         &>.description {
-                            font-size: 22px;
+                            font-size: 20px;
                             font-weight: 400;
                             margin-bottom: 20px;
                         }
@@ -1062,47 +1078,6 @@ body {
                         .cards {
                             display: flex;
                             flex-direction: row;
-            
-                            // .card {
-                            //     margin-bottom: 30px;
-                            //     display: flex;
-                            //     flex-direction: row;
-                            //     width: 100%;
-            
-                            //     .icon {
-                            //         border-radius: 50%;
-                            //         // padding: 15px;
-                            //         height: 60px;
-                            //         width: 60px;
-                            //         display: flex;
-                            //         justify-content: center;
-                            //         align-items: center;
-                            //         box-shadow: 2px 2px 5px #00000022;
-            
-                            //         img {
-                            //             height: 30px;
-                            //             width: auto;
-                            //         }
-                            //     }
-
-                            //     .txt-content {
-                            //         width: 70%;
-                            //         padding-left: 30px;
-                            //         display: flex;
-                            //         flex-direction: column;
-                            //         align-items: flex-start;
-                                    
-                            //         .title {
-                            //             font-size: 22px;
-                            //             font-weight: 500;
-                            //             margin: 0;
-                            //         }
-
-                            //         .description {
-                            //             font-size: 18px;
-                            //         }
-                            //     }
-                            // }
 
                             .card {
                                 margin-bottom: 30px;
@@ -1156,47 +1131,6 @@ body {
                         width: 100%;
                         display: flex;
                         flex-direction: column;
-        
-                        // .card {
-                        //     margin-bottom: 30px;
-                        //     display: flex;
-                        //     flex-direction: row;
-                        //     width: 100%;
-        
-                        //     .icon {
-                        //         border-radius: 50%;
-                        //         // padding: 15px;
-                        //         height: 60px;
-                        //         width: 60px;
-                        //         display: flex;
-                        //         justify-content: center;
-                        //         align-items: center;
-                        //         box-shadow: 2px 2px 5px #00000022;
-        
-                        //         img {
-                        //             height: 30px;
-                        //             width: auto;
-                        //         }
-                        //     }
-
-                        //     .txt-content {
-                        //         width: 70%;
-                        //         padding-left: 30px;
-                        //         display: flex;
-                        //         flex-direction: column;
-                        //         align-items: flex-start;
-                                
-                        //         .title {
-                        //             font-size: 22px;
-                        //             font-weight: 500;
-                        //             margin: 0;
-                        //         }
-
-                        //         .description {
-                        //             font-size: 18px;
-                        //         }
-                        //     }
-                        // }
 
                         .card {
                             margin-bottom: 30px;
@@ -1256,8 +1190,8 @@ body {
                 
                 .title {
                     font-size: 32px;
-                    font-weight: 600;
-                    margin-bottom: 0px;
+                    font-weight: 700;
+                    margin-bottom: 30px;
                 }
                 .description {
                     font-size: 18px;
@@ -1306,10 +1240,11 @@ body {
             & > .title {
                 font-size: 42px;
                 text-align: center;
+                margin-bottom: 30px;
             }
 
             & > .description {
-                font-size: 18px;
+                font-size: 20px;
                 text-align: center;
                 width: 66%;
             }
@@ -1353,11 +1288,11 @@ body {
                         padding: 0 30px;
                         .title {
                             font-size: 32px;
-                            font-weight: 600;
+                            font-weight: 700;
                             margin-bottom: 20px;
                         }
                         .description {
-                            font-size: 22px;
+                            font-size: 20px;
                             font-weight: 400;
                             margin-bottom: 20px;
                         }
@@ -1389,14 +1324,14 @@ body {
 
                         & > .title {
                             font-size: 32px;
-                            font-weight: 600;
+                            font-weight: 700;
                             margin-bottom: 20px;
                         }
 
                         & > .description {
                             font-size: 20px;
                             font-weight: 400;
-                            margin-bottom: 20px;
+                            margin-bottom: 30px;
 
                             p {
                                 margin: 0;
@@ -1474,12 +1409,20 @@ body {
             & > .title {
                 font-size: 42px;
                 text-align: center;
+                font-weight: 700;
             }
 
             & > .text-content {
+                padding-top: 60px;
 
                 .paragraphe {
                     font-size: 18px;
+
+                    h1 {
+                        font-size: 28px;
+                        font-weight: 700;
+                        margin: 50px 0 25px;
+                    }
                 }
 
             }
@@ -1525,17 +1468,27 @@ body {
             justify-content: center;
             align-items: center;
 
-            & > .title {
-                font-size: 42px;
-                text-align: center;
-                margin-bottom: 0;
-            }
+            .row {
+                width: 100%;
 
-            & > .description {
-                font-size: 18px;
-                text-align: center;
-                width: 66%;
-                margin-bottom: 90px;
+                .col-12 {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    & > .title {
+                        font-size: 42px;
+                        text-align: center;
+                        margin-bottom: 0;
+                    }
+        
+                    & > .description {
+                        font-size: 18px;
+                        text-align: center;
+                        margin-bottom: 90px;
+                    }
+
+                }
             }
 
             .cards {
@@ -1558,6 +1511,8 @@ body {
                         overflow: hidden;
                         position: relative;
                         height: 350px;
+                        min-height: 350px;
+
 
                         img {
                             min-width: 100%;
@@ -1570,7 +1525,10 @@ body {
                     }
 
                     .card-txt {
-                        padding: 15px 15px 90px;
+                        padding: 15px;
+                        display: flex;
+                        flex-direction: column;
+                        min-height: 350px;
 
                         .link {
                             color: $dark-color;
@@ -1579,10 +1537,19 @@ body {
 
                         .card-title {
                             font-size: 22px;
+                            margin: 15px 0;
+                            font-weight: 600;
                         }
 
                         .card-description {
-                            font-size: 14px;
+                            font-size: 15px;
+                        }
+
+                        .btn {
+                            position: absolute;
+                            bottom: 15px;
+                            align-self: flex-end;
+                            justify-self: flex-end;
                         }
                     }
                 }
@@ -1731,7 +1698,7 @@ body {
             padding: 50px;
             border: 1px solid #eee;
             border-radius: 30px;
-            width: 80%;
+            max-width: 80vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -2157,6 +2124,32 @@ body {
                     border: 0px;
                 }
 
+            }
+        }
+    }
+}
+
+
+// BLOG MODALS
+
+.modal-blog {
+    .modal-dialog {
+        .modal-content {
+            .modal-header {
+                .modal-title {
+                    font-weight: 600;
+                }
+            }
+            .modal-body {
+                img {
+                    max-width: 100%;
+                    margin-bottom: 45px;
+                }
+
+                .post-date {
+                    float: right;
+                    font-weight: 600;
+                }
             }
         }
     }

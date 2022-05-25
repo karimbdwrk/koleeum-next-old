@@ -1,6 +1,7 @@
 import { useState, useEffect, useLayoutEffect } from 'react'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
+import Image from 'next/image'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -37,27 +38,37 @@ function Header() {
     })
 
     return (
-        <Container id="header">
-            <Row>
-                <Col xs={12} sm={3}>
-                    <div className='logo'>
-                        <Link href='/'>
-                            <a onClick={() => setActive('/')}>
-                                <img src={data.header.logo.url} />
-                            </a>
+        <header id="header">
+            <Container>
+                <Row>
+                    <Col xs={12} sm={3}>
+                        <div className='logo'>
+                            <Link href='/'>
+                                <a onClick={() => setActive('/')}>
+                                    {/* <img src={data.header.logo.url} /> */}
+                                    <Image
+                                        src={data.header.logo.url}
+                                        alt="Logo Koleeum.immo"
+                                        width={200}
+                                        height={50}
+                                    />
+                                </a>
+                            </Link>
+                        </div>
+                    </Col>
+                    <Col xs={12} sm={6}>
+                        <nav>
+                            {navLinks}
+                        </nav>
+                    </Col>
+                    <Col xs={12} sm={3} className="login-container">
+                        <Link href={data.header.button.link}>
+                            <a className="btn">{data.header.button.title}</a>
                         </Link>
-                    </div>
-                </Col>
-                <Col xs={12} sm={6}>
-                    <nav>
-                        {navLinks}
-                    </nav>
-                </Col>
-                <Col xs={12} sm={3} className="login-container">
-                    <Button variant="primary">Primary</Button>
-                </Col>
-            </Row>
-        </Container>
+                    </Col>
+                </Row>
+            </Container>
+        </header>
     )
 }
 
