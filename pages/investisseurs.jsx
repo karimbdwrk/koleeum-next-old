@@ -60,7 +60,7 @@ export default function Investisseurs(props) {
                 <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.garanties.description}</Markdown>
                 <div className="logos">
                     {data.garanties.logos.map((logo) =>
-                        <div className="logo">
+                        <div key={logo.id} className="logo">
                             <img src={logo.image.url} />
                         </div>
                     )}
