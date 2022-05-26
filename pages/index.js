@@ -19,13 +19,13 @@ export default function Home(props) {
       <div className="hero">
         <div className="container">
           <div className="txt-content">
-            <h1 className="title">{home.hero.title}</h1>
-            <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{home.hero.description}</Markdown>
-            <a className="btn" target="_blank" rel="noreferrer" href={'https://' + home.hero.button.link}>{home.hero.button.title}</a>
+            <h1 className="title">{props.home.hero.title}</h1>
+            <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{props.home.hero.description}</Markdown>
+            <a className="btn" target="_blank" rel="noreferrer" href={'https://' + home.hero.button.link}>{props.home.hero.button.title}</a>
           </div>
           <div className="image">
             <Image
-              src={home.hero.image.url}
+              src={props.home.hero.image.url}
               alt="Hero illustration"
               width={550}
               height={550}
@@ -38,10 +38,10 @@ export default function Home(props) {
       </div>
       <div className="expertises">
         <div className="container">
-            <h1 className="title">{home.expertise.title}</h1>
-            <Markdown className="description">{home.expertise.description}</Markdown>
+            <h1 className="title">{props.home.expertise.title}</h1>
+            <Markdown className="description">{props.home.expertise.description}</Markdown>
             <div className="cards">
-              {home.expertise.card.map((card) => 
+              {props.home.expertise.card.map((card) => 
                 <div key={card.id} className="card">
                   <div className="icon">
                     <Image
@@ -60,7 +60,7 @@ export default function Home(props) {
       </div>
       <div className="services">
         <div className="container">
-          {home.services.service.map((service) =>
+          {props.home.services.service.map((service) =>
               <div key={service.id} className="service">
                 <div className="image">
                   <Image
@@ -86,17 +86,17 @@ export default function Home(props) {
         <div className="container">
               <div className="image">
                   <Image
-                    src={home.prestations.image.url}
+                    src={props.home.prestations.image.url}
                     alt="Prestation illustration"
                     width={550}
                     height={550}
                   />
               </div>
               <div className="txt-content">
-                  <h2 className="title">{home.prestations.title}</h2>
-                  <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{home.prestations.description}</Markdown>
+                  <h2 className="title">{props.home.prestations.title}</h2>
+                  <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{props.home.prestations.description}</Markdown>
                   <div className="prestas">
-                      {home.prestations.card.map((card) =>
+                      {props.home.prestations.card.map((card) =>
                           <div key={card.id} className="presta">
                           <div className="icon">
                               <Image
@@ -119,8 +119,8 @@ export default function Home(props) {
       <h2 className="title-actu">Actualité</h2>
       <div className="newsletter">
           <div className="container">
-              <h2 className="title">{home.newsletter.title}</h2>
-              <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{home.newsletter.description}</Markdown>
+              <h2 className="title">{props.home.newsletter.title}</h2>
+              <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{props.home.newsletter.description}</Markdown>
               <div className="newsletter-form">
                   <NewsletterForm />
               </div>
