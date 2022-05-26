@@ -1790,12 +1790,17 @@ body {
             justify-content: center;
             align-items: center;
 
-            & > .title {
-                font-size: 42px;
-                text-align: center;
+            .row {
+                justify-content: center;
             }
 
-            & > .text-content {
+            .title {
+                font-size: 42px;
+                margin-bottom: 30px;
+                // text-align: center;
+            }
+
+            .text-content {
                 font-size: 18px;
             }
         }
@@ -1816,12 +1821,17 @@ body {
             justify-content: center;
             align-items: center;
 
-            & > .title {
-                font-size: 42px;
-                text-align: center;
+            .row {
+                justify-content: center;
             }
 
-            & > .text-content {
+            .title {
+                font-size: 42px;
+                margin-bottom: 30px;
+                // text-align: center;
+            }
+
+            .text-content {
                 font-size: 18px;
             }
         }
@@ -1842,12 +1852,17 @@ body {
             justify-content: center;
             align-items: center;
 
-            & > .title {
-                font-size: 42px;
-                text-align: center;
+            .row {
+                justify-content: center;
             }
 
-            & > .text-content {
+            .title {
+                font-size: 42px;
+                margin-bottom: 30px;
+                // text-align: center;
+            }
+
+            .text-content {
                 font-size: 18px;
             }
         }

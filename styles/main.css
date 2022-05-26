@@ -1443,11 +1443,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-#__next .legal .container > .title {
-  font-size: 42px;
-  text-align: center;
+#__next .legal .container .row {
+  justify-content: center;
 }
-#__next .legal .container > .text-content {
+#__next .legal .container .title {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+#__next .legal .container .text-content {
   font-size: 18px;
 }
 #__next .honoraires {
@@ -1463,11 +1466,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-#__next .honoraires .container > .title {
-  font-size: 42px;
-  text-align: center;
+#__next .honoraires .container .row {
+  justify-content: center;
 }
-#__next .honoraires .container > .text-content {
+#__next .honoraires .container .title {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+#__next .honoraires .container .text-content {
   font-size: 18px;
 }
 #__next .rgpd {
@@ -1483,11 +1489,14 @@ body {
   justify-content: center;
   align-items: center;
 }
-#__next .rgpd .container > .title {
-  font-size: 42px;
-  text-align: center;
+#__next .rgpd .container .row {
+  justify-content: center;
 }
-#__next .rgpd .container > .text-content {
+#__next .rgpd .container .title {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+#__next .rgpd .container .text-content {
   font-size: 18px;
 }
 #__next .evaluation {
