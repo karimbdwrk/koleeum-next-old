@@ -22,7 +22,7 @@ export default function Home(props) {
             <h1 className="title">{home.hero.title}</h1>
             <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{home.hero.description}</Markdown>
             {/* <div className="description">{this.state.description}</div> */}
-            <a className="btn" target="_blank" href={'https://' + home.hero.button.link}>{home.hero.button.title}</a>
+            <a className="btn" target="_blank" rel="noreferrer" href={'https://' + home.hero.button.link}>{home.hero.button.title}</a>
           </div>
           <div className="image">
             {/* <img src={home.hero.image.url} /> */}
