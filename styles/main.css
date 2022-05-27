@@ -159,15 +159,15 @@ html {
   width: 100%;
 }
 
-.btn {
+.btn, a.btn {
   cursor: pointer;
-  background-color: #4270ED;
-  color: #FFFFFF;
+  background-color: #4270ED !important;
+  color: #FFFFFF !important;
   border: 0;
-  border-radius: 30px;
+  border-radius: 30px !important;
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 16px !important;
+  font-weight: 500 !important;
   padding: 10px 30px;
   width: -moz-fit-content;
   width: fit-content;
