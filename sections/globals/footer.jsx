@@ -31,7 +31,54 @@ function Footer() {
 
     return (
         <footer className="footer">
-            <div key={0} className="container">
+            <Container>
+                <Row>
+                    <Col xs={12} sm={3}>
+                        <div className="logo">
+                            <img src={data.footer_informations.logo.url} />
+                            <p className="logo-address">{data.footer_informations.address}</p>
+                            <p className="logo-tel">{data.footer_informations.telephone}</p>
+                            <a className="logo-email" href={"mailto:" + data.footer_informations.email}>{data.footer_informations.email}</a>
+                        </div>
+                    </Col>
+                    <Col xs={12} sm={6}>
+                        {data.footer_navigation.map((column, index) => 
+                            <div key={index} className="column">
+                                <h3 className="title">{column.title}</h3>
+                                <ul>
+                                {/* {column.link.map((l, index) => 
+                                    <li key={index}>{l.title}</li>
+                                )} */}
+                                { column.link.map((l, index) => {
+                                return (
+                                    <li key={index}>
+                                        <Link key={index} href={l.link}><a className="hvr-underline-from-left">{l.title}</a></Link>
+                                    </li>
+                                    )
+                                }) 
+                                }
+                                </ul>
+                            </div>
+                        )}
+                    </Col>
+                    <Col xs={12} sm={3}>
+                        <ContactForm />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col xs={12}>                
+                        <div className="reseaux-sociaux">
+                            {data.social_network.map((social, index) => 
+                                <a key={index} href={social.link} target="_blank" rel="noreferrer"><img alt="alternate-txt" src={social.icon.url} /></a>
+                            )}
+                        </div>
+                        <div className="copyright">
+                            <p>© koleeum.com - 2022</p>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            {/* <div key={0} className="container">
                 <div className="logo">
                     <img src={data.footer_informations.logo.url} />
                     <p className="logo-address">{data.footer_informations.address}</p>
@@ -42,13 +89,10 @@ function Footer() {
                     <div key={index} className="column">
                         <h3 className="title">{column.title}</h3>
                         <ul>
-                        {/* {column.link.map((l, index) => 
-                            <li key={index}>{l.title}</li>
-                        )} */}
                         { column.link.map((l, index) => {
                         return (
                             <li key={index}>
-                                <Link key={index} href={l.link} className="hvr-underline-from-left"><a>{l.title}</a></Link>
+                                <Link key={index} href={l.link}><a className="hvr-underline-from-left">{l.title}</a></Link>
                             </li>
                             )
                         }) 
@@ -61,13 +105,13 @@ function Footer() {
                 <div key={1} className="container">
                 <div className="reseaux-sociaux">
                     {data.social_network.map((social, index) => 
-                        <a key={index}><img alt="alternate-txt" src={social.icon.url} /></a>
+                        <a key={index} href={social.link} target="_blank" rel="noreferrer"><img alt="alternate-txt" src={social.icon.url} /></a>
                     )}
                 </div>
                 <div className="copyright">
                     <p>© koleeum.com - 2022</p>
                 </div>
-            </div>
+            </div> */}
         </footer>
     )
 }
