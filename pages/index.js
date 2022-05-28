@@ -61,8 +61,8 @@ export default function Home(props) {
           </Row>
           <Row className="cards">
               {props.home.expertise.card.map((card) => 
-                <Col xs={12} sm={6} md={3}>
-                  <div key={card.id} className="card">
+                <Col key={card.id} xs={12} sm={6} md={3}>
+                  <div className="card">
                     <div className="icon">
                       <Image
                         src={card.icon.url}
