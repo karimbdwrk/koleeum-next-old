@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Markdown from 'markdown-to-jsx'
 import RegistrationForm from '../sections/components/registration-form'
 
@@ -16,76 +20,120 @@ export default function Investisseurs(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="proprietaires fadeIn">
-        <div className="container">
-            <h1 className="title">{data.title}</h1>
-            <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.description}</Markdown>
-            {/* <Link className="btn" to={data.Call_to_action.link}>{data.Call_to_action.title}</Link> */}
-            <div className="sections">
-                <div key={data.first_section.id} className="section first-section">
-                    <div className="image">
-                        <img src={data.first_section.image.url} />
-                    </div>
-                    <div className="txt-content">
-                        <h2 className="title">{data.first_section.title}</h2>
-                        <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.first_section.description}</Markdown>
-                    </div>
-                    <div className="cards">
-                        {data.first_section.cards.map((card) =>
-                            <div key={card.id} className="card">
-                                <div className="icon">
-                                    <img src={card.icon.url} />
+            <Container className="title-container">
+                <Row className="justify-content-center">
+                    <Col xs="12" sm={10} md={8}>
+                        <h1 className="title">{data.title}</h1>
+                        <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.description}</Markdown>
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row>
+                    <Col xs={12}>
+                        <div className="sections">
+                            <Container>
+                                <Row key={data.first_section.id} className="section first-section">
+                                    <Col xs={12} sm={4}>
+                                        <div className="image">
+                                            <Image
+                                                src={data.first_section.image.url}
+                                                alt="Hero illustration"
+                                                width={550}
+                                                height={550}
+                                            />
+                                        </div>
+                                    </Col>
+                                    <Col xs={12} sm={8}>
+                                        <div className="txt-content">
+                                            <h2 className="title">{data.first_section.title}</h2>
+                                            <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.first_section.description}</Markdown>
+                                        </div>
+                                    </Col>
+                                </Row>
+                                <Row className="cards">
+                                    {data.first_section.cards.map((card) =>
+                                        <Col xs={12} sm={4} key={card.id} className="card">
+                                            <div className="icon">
+                                                <img src={card.icon.url} />
+                                            </div>
+                                            <div className="txt-content">
+                                                <h2 className="title">{card.title}</h2>
+                                                <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{card.description}</Markdown>
+                                            </div>
+                                        </Col>
+                                    )}
+                                </Row>
+                            </Container>
+                            <Container>
+                                {data.page_section.map((section) =>
+                                    <Row key={section.id} className="section">
+                                        <Col xs={12} sm={4}>
+                                            <div className="image">
+                                                <img src={section.image.url} />
+                                            </div>
+                                        </Col>
+                                        <Col xs={12} sm={8}>
+                                            <div className="txt-content">
+                                                <h2 className="title">{section.title}</h2>
+                                                <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{section.description}</Markdown>
+                                            </div>
+                                        </Col>
+                                    </Row>
+                                )}
+                            </Container>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row>
+                    <Col xs={12}>
+                        <div className="garanties">
+                            <h2 className="title">{data.garanties.title}</h2>
+                            <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.garanties.description}</Markdown>
+                            <div className="logos">
+                                {data.garanties.logos.map((logo) =>
+                                    <div key={logo.id} className="logo">
+                                        <img src={logo.image.url} />
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row>
+                    <Col xs={12}>
+                        <div className="sections">
+                            <div key={data.last_section.id} className="section">
+                                <div className="image">
+                                    <img src={data.last_section.image.url} />
                                 </div>
                                 <div className="txt-content">
-                                    <h2 className="title">{card.title}</h2>
-                                    <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{card.description}</Markdown>
+                                    <h2 className="title">{data.last_section.title}</h2>
+                                    <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.last_section.description}</Markdown>
                                 </div>
                             </div>
-                        )}
-                    </div>
-                </div>
-                {data.page_section.map((section) =>
-                    <div key={section.id} className="section">
-                        <div className="image">
-                            <img src={section.image.url} />
                         </div>
-                        <div className="txt-content">
-                            <h2 className="title">{section.title}</h2>
-                            <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{section.description}</Markdown>
+                    </Col>
+                </Row>
+            </Container>
+            <Container>
+                <Row>
+                    <Col xs={12}>
+                        <div className="registration">
+                            <div className="container">
+                                <h2 className="title">{data.registration.title}</h2>
+                                <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.registration.description}</Markdown>
+                                <RegistrationForm />
+                            </div>
                         </div>
-                    </div>
-                )}
-            </div>
-            <div className="garanties">
-                <h2 className="title">{data.garanties.title}</h2>
-                <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.garanties.description}</Markdown>
-                <div className="logos">
-                    {data.garanties.logos.map((logo) =>
-                        <div key={logo.id} className="logo">
-                            <img src={logo.image.url} />
-                        </div>
-                    )}
-                </div>
-            </div>
-            <div className="sections">
-                <div key={data.last_section.id} className="section">
-                    <div className="image">
-                        <img src={data.last_section.image.url} />
-                    </div>
-                    <div className="txt-content">
-                        <h2 className="title">{data.last_section.title}</h2>
-                        <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.last_section.description}</Markdown>
-                    </div>
-                </div>
-            </div>
-            <div className="registration">
-                <div className="container">
-                    <h2 className="title">{data.registration.title}</h2>
-                    <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.registration.description}</Markdown>
-                    <RegistrationForm />
-                </div>
-            </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
-    </div>
     </div>
   )
 }

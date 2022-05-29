@@ -33,7 +33,7 @@ function Footer() {
         <footer className="footer">
             <Container>
                 <Row>
-                    <Col xs={12} sm={3}>
+                    <Col xs={12} sm={3} className="logo-container">
                         <div className="logo">
                             <img src={data.footer_informations.logo.url} />
                             <p className="logo-address">{data.footer_informations.address}</p>
@@ -41,7 +41,7 @@ function Footer() {
                             <a className="logo-email" href={"mailto:" + data.footer_informations.email}>{data.footer_informations.email}</a>
                         </div>
                     </Col>
-                    <Col xs={12} sm={6}>
+                    <Col xs={12} sm={5} className="columns-container">
                         {data.footer_navigation.map((column, index) => 
                             <div key={index} className="column">
                                 <h3 className="title">{column.title}</h3>
@@ -61,12 +61,12 @@ function Footer() {
                             </div>
                         )}
                     </Col>
-                    <Col xs={12} sm={3}>
+                    <Col xs={12} sm={4} className="contact-container">
                         <ContactForm />
                     </Col>
                 </Row>
                 <Row>
-                    <Col xs={12}>                
+                    <Col xs={12} className="copyright-container">                
                         <div className="reseaux-sociaux">
                             {data.social_network.map((social, index) => 
                                 <a key={index} href={social.link} target="_blank" rel="noreferrer"><img alt="alternate-txt" src={social.icon.url} /></a>
