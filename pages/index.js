@@ -54,7 +54,7 @@ export default function Home(props) {
       <div className="expertises">
         <Container>
           <Row className="title-container">
-            <Col xs={12} sm={10}>
+            <Col xs={12} sm={10} md={8}>
               <h1 className="title">{props.home.expertise.title}</h1>
               <Markdown className="description">{props.home.expertise.description}</Markdown>
             </Col>
@@ -79,12 +79,12 @@ export default function Home(props) {
           </Row>
         </Container>
       </div>
-      <div className="services">        
+      <div className="services">    
         <Container>
           {props.home.services.service.map((service) =>
             <div key={service.id} className="service">
-              <Row>
-                <Col xs={12} sm={5}>
+              <Row className="justify-content-center">
+                <Col xs={12} sm={4}>
                   <div className="image">
                     <Image
                       src={service.image.url}
@@ -94,7 +94,7 @@ export default function Home(props) {
                     />
                   </div>
                 </Col>
-                <Col xs={12} sm={7}>
+                <Col xs={12} sm={5}>
                   <div className="txt-content">
                     <h1 className="title">{service.title}</h1>
                     <Markdown options={{ wrapper: 'p', forceWrapper: true }} className="description">{service.description}</Markdown>
@@ -110,8 +110,8 @@ export default function Home(props) {
       </div>
       <div className="prestations">
         <Container>
-          <Row>
-            <Col xs={12} sm={6}>
+          <Row className="justify-content-center">
+            <Col xs={12} sm={4}>
               <div className="image">
                   <Image
                     src={props.home.prestations.image.url}
@@ -121,7 +121,7 @@ export default function Home(props) {
                   />
               </div>
             </Col>
-            <Col xs={12} sm={6}>
+            <Col xs={12} sm={5}>
               <div className="txt-content">
                   <h2 className="title">{props.home.prestations.title}</h2>
                   <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{props.home.prestations.description}</Markdown>

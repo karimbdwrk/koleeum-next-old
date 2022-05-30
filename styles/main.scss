@@ -274,10 +274,6 @@ body {
                 width: auto;
                 justify-content: flex-start;
             }
-
-            #burger {
-                display: none;
-            }
         }
 
         nav {
@@ -306,6 +302,10 @@ body {
 
             .btn {
                 height: max-content;
+
+                .bi-person {
+                    display: none;
+                }
             }
 
             #burger {
@@ -383,6 +383,10 @@ body {
                     padding: 0;
                     box-shadow: none;
 
+                    .bi-person {
+                        display: block;
+                    }
+
                     span {
                         display: none;
                     }
@@ -419,22 +423,23 @@ body {
         // justify-content: center;
         // align-items: center;
         // flex-direction: column;
-        padding: 120px 0 90px;
+        padding: 90px 0;
 
         .txt-content {
             color: $dark-color;
             display: flex;
             flex-direction: column;
             justify-content: center;
+            height: 100%;
 
             .title {
-                font-size: 48px;
+                font-size: 42px;
                 // margin-top: 90px;
                 font-weight: 700;
             }
 
             .description {
-                font-size: 24px;
+                font-size: 22px;
                 font-weight: 400;
                 margin-bottom: 30px;
 
@@ -541,13 +546,14 @@ body {
 
             .title {
                 text-align: center;
-                font-size: 42px;
+                font-size: 28px;
                 font-weight: 700;
+                margin-bottom: 30px;
             }
 
             .description {
                 text-align: center;
-                font-size: 22px;
+                font-size: 18px;
                 font-weight: 400;
             }
         }
@@ -597,7 +603,7 @@ body {
                 }
 
                 .description {
-                    font-size: 20px;
+                    font-size: 16px;
                     font-weight: 400;
                 }
             }
@@ -676,13 +682,18 @@ body {
 
             .txt-content {
                 padding: 0 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+
                 .title {
-                    font-size: 32px;
+                    font-size: 24px;
                     font-weight: 600;
                     margin-bottom: 20px;
                 }
                 .description {
-                    font-size: 24px;
+                    font-size: 18px;
                     font-weight: 400;
                     margin-bottom: 20px;
                 }
@@ -752,19 +763,20 @@ body {
 
             .txt-content {
                 // margin-top: 90px;
+                padding-left: 30px;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 // align-items: center;
 
                 & > .title {
-                    font-size: 32px;
+                    font-size: 24px;
                     font-weight: 600;
                     margin-bottom: 20px;
                 }
 
                 & > .description {
-                    font-size: 20px;
+                    font-size: 18px;
                     font-weight: 400;
                     margin-bottom: 20px;
 
@@ -805,7 +817,7 @@ body {
                             align-items: center;
                             
                             .title {
-                                font-size: 22px;
+                                font-size: 18px;
                                 font-weight: 500;
                                 margin: 0;
                             }
@@ -901,14 +913,14 @@ body {
 
             .title {
                 text-align: center;
-                font-size: 42px;
+                font-size: 32px;
                 margin-top: 0;
                 margin-bottom: 20px;
                 font-weight: 700;
             }
             .description {
                 text-align: center;
-                font-size: 22px;
+                font-size: 18px;
                 margin-bottom: 50px;
 
                 p {
@@ -1415,193 +1427,101 @@ body {
             }
         }
 
+        .first-section {
+
+            .txt-content {
+                height: 100%;
+                padding-left: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .title {
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                }
+
+                .description {
+                    font-size: 16px;
+                }
+            }
+
+        }
+
+        .cards {
+            margin-top: 90px;
+
+            .card {
+                border: 1px solid #EEE;
+                border-radius: 30px;
+                padding: 30px 15px;
+                height: 100%;
+                // margin-right: 60px;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: center;
+
+                &:last-of-type {
+                    margin-right: 0;
+                }
+
+                .icon {
+                    border-radius: 30px;
+                    // padding: 15px;
+                    height: 60px;
+                    width: 60px;
+                    margin-bottom: 0px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    box-shadow: 2px 2px 5px #00000022;
+                    min-height: 60px;
+
+                    img {
+                        height: 30px;
+                        width: auto;
+                    }
+                }
+
+                .title {
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: 600;
+                    margin-bottom: 20px;
+                    margin-top: 15px;
+                }
+
+                .description {
+                    font-size: 16px;
+                    font-weight: 400;
+                }
+            }
+        }
+
         .sections {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             padding: 90px 0;
             
             .section {
                 margin-top: 90px;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
 
-                &:nth-of-type(2n) {
-
-                    div:first-of-type {
-                        order: 2;
-                    }
-
-                    div:last-of-type {
-                        order: 1;
-                    }
-                }
-
-                &.first-section {
-
-                    .image {
-                        width: 100%;
-                    }
-
-                    .txt-content {
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                        padding-bottom: 90px;
-
-                        .title {
-                            width: 100%;
-                        }
-                    }
-                    
-                    .cards {
-                        width: 100%;
-                        flex-direction: row;
-                        justify-content: space-between;
-                        padding-top: 50px;
-
-                        .card {
-                            width: 32%;
-
-                            .txt-content {
-                                width: 100%;
-                            }
-                        }
-                    }
-                }
-
-                &>.image {
-                    width: 30%;
-                    display: flex;
-                    justify-content: center;
-                    img {
-                        max-height: 500px;
-                        width: 100%;
-                    }
-                }
-
-                &>.txt-content {
-                    width: 50%;
-                    margin-top: 3%;
-                    padding: 0 30px;
-                    &>.title {
-                        font-size: 32px;
-                        font-weight: 700;
-                        margin-bottom: 20px;
-                    }
-                    &>.description {
-                        font-size: 20px;
-                        font-weight: 400;
-                        margin-bottom: 20px;
-                    }
-
-                    .cards {
-                        display: flex;
-                        flex-direction: row;
-
-                        .card {
-                            margin-bottom: 30px;
-                            display: flex;
-                            flex-direction: column;
-                            width: 30%;
-                            // width: max-content;
-                            border: 1px solid #f0f0f0;
-                            padding: 30px;
-                            border-radius: 30px;
-        
-                            .icon {
-                                border-radius: 50%;
-                                // padding: 15px;
-                                height: 60px;
-                                width: 60px;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                box-shadow: 2px 2px 5px #00000022;
-                                margin-bottom: 10px;
-        
-                                img {
-                                    height: 30px;
-                                    width: auto;
-                                }
-                            }
-
-                            .txt-content {
-                                width: 100%;
-                                // padding-left: 30px;
-                                display: flex;
-                                flex-direction: column;
-                                align-items: flex-start;
-                                
-                                .title {
-                                    font-size: 22px;
-                                    font-weight: 500;
-                                    margin: 0;
-                                }
-
-                                .description {
-                                    font-size: 18px;
-                                }
-                            }
-                        }
-                    }
-                }
-
-                .cards {
-                    width: 100%;
+                .txt-content {
+                    height: 100%;
+                    padding-left: 30px;
                     display: flex;
                     flex-direction: column;
-
-                    .card {
+                    justify-content: center;
+    
+                    .title {
+                        font-size: 24px;
                         margin-bottom: 30px;
-                        display: flex;
-                        flex-direction: column;
-                        // width: 100%;
-                        // width: max-content;
-                        border: 1px solid #f0f0f0;
-                        padding: 30px;
-                        border-radius: 30px;
+                    }
     
-                        .icon {
-                            border-radius: 50%;
-                            // padding: 15px;
-                            height: 60px;
-                            width: 60px;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            box-shadow: 2px 2px 5px #00000022;
-                            margin-bottom: 10px;
-    
-                            img {
-                                height: 30px;
-                                width: auto;
-                            }
-                        }
-
-                        .txt-content {
-                            width: 70%;
-                            // padding-left: 30px;
-                            display: flex;
-                            flex-direction: column;
-                            align-items: flex-start;
-                            
-                            .title {
-                                font-size: 22px;
-                                font-weight: 500;
-                                margin: 0;
-                            }
-
-                            .description {
-                                font-size: 18px;
-                            }
-                        }
+                    .description {
+                        font-size: 16px;
                     }
                 }
+
             }
 
             .garanties {
@@ -1643,6 +1563,7 @@ body {
                 }
             }
         }
+
     }
 
     // PAGE LOCATAIRES
@@ -2130,13 +2051,13 @@ body {
 
             .title {
                 text-align: center;
-                font-size: 42px;
+                font-size: 32px;
                 margin-top: 0;
                 margin-bottom: 20px;
             }
             .description {
                 text-align: center;
-                font-size: 22px;
+                font-size: 18px;
                 margin-bottom: 50px;
 
                 p {

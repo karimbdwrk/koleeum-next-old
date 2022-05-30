@@ -33,7 +33,7 @@ export default function Investisseurs(props) {
                     <Col xs={12}>
                         <div className="sections">
                             <Container>
-                                <Row key={data.first_section.id} className="section first-section">
+                                <Row key={data.first_section.id} className="section first-section justify-content-center">
                                     <Col xs={12} sm={4}>
                                         <div className="image">
                                             <Image
@@ -44,7 +44,7 @@ export default function Investisseurs(props) {
                                             />
                                         </div>
                                     </Col>
-                                    <Col xs={12} sm={8}>
+                                    <Col xs={12} sm={5}>
                                         <div className="txt-content">
                                             <h2 className="title">{data.first_section.title}</h2>
                                             <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.first_section.description}</Markdown>
@@ -53,13 +53,15 @@ export default function Investisseurs(props) {
                                 </Row>
                                 <Row className="cards">
                                     {data.first_section.cards.map((card) =>
-                                        <Col xs={12} sm={4} key={card.id} className="card">
-                                            <div className="icon">
-                                                <img src={card.icon.url} />
-                                            </div>
-                                            <div className="txt-content">
-                                                <h2 className="title">{card.title}</h2>
-                                                <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{card.description}</Markdown>
+                                        <Col xs={12} sm={4} key={card.id}>
+                                            <div className="card">
+                                                <div className="icon">
+                                                    <img src={card.icon.url} />
+                                                </div>
+                                                <div className="txt-content">
+                                                    <h2 className="title">{card.title}</h2>
+                                                    <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{card.description}</Markdown>
+                                                </div>
                                             </div>
                                         </Col>
                                     )}
@@ -67,13 +69,13 @@ export default function Investisseurs(props) {
                             </Container>
                             <Container>
                                 {data.page_section.map((section) =>
-                                    <Row key={section.id} className="section">
+                                    <Row key={section.id} className="section justify-content-center">
                                         <Col xs={12} sm={4}>
                                             <div className="image">
                                                 <img src={section.image.url} />
                                             </div>
                                         </Col>
-                                        <Col xs={12} sm={8}>
+                                        <Col xs={12} sm={5}>
                                             <div className="txt-content">
                                                 <h2 className="title">{section.title}</h2>
                                                 <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{section.description}</Markdown>
@@ -86,36 +88,34 @@ export default function Investisseurs(props) {
                     </Col>
                 </Row>
             </Container>
-            <Container>
-                <Row>
-                    <Col xs={12}>
-                        <div className="garanties">
-                            <h2 className="title">{data.garanties.title}</h2>
-                            <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.garanties.description}</Markdown>
-                            <div className="logos">
+            <Container className="garanties">
+                <Row className="justify-content-center">
+                    <Col xs={12} sm={10} md={8}>
+                        <h2 className="title">{data.garanties.title}</h2>
+                        <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.garanties.description}</Markdown>
+                        <Container>
+                            <Row className="logos justify-content-center">
                                 {data.garanties.logos.map((logo) =>
-                                    <div key={logo.id} className="logo">
+                                    <Col xs={6} sm={4} md={3} key={logo.id} className="logo">
                                         <img src={logo.image.url} />
-                                    </div>
+                                    </Col>
                                 )}
-                            </div>
-                        </div>
+                            </Row>
+                        </Container>
                     </Col>
                 </Row>
             </Container>
-            <Container>
-                <Row>
-                    <Col xs={12}>
-                        <div className="sections">
-                            <div key={data.last_section.id} className="section">
-                                <div className="image">
-                                    <img src={data.last_section.image.url} />
-                                </div>
-                                <div className="txt-content">
-                                    <h2 className="title">{data.last_section.title}</h2>
-                                    <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.last_section.description}</Markdown>
-                                </div>
-                            </div>
+            <Container className="sections">
+                <Row key={data.last_section.id} className="section justify-content-center">
+                    <Col xs={12} sm={4}>
+                        <div className="image">
+                            <img src={data.last_section.image.url} />
+                        </div>
+                    </Col>
+                    <Col xs={12} sm={5}>
+                        <div className="txt-content">
+                            <h2 className="title">{data.last_section.title}</h2>
+                            <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.last_section.description}</Markdown>
                         </div>
                     </Col>
                 </Row>

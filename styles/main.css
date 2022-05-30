@@ -249,9 +249,6 @@ body {
   width: auto;
   justify-content: flex-start;
 }
-#__next #header .logo #burger {
-  display: none;
-}
 #__next #header nav {
   width: 100%;
   display: flex;
@@ -275,6 +272,9 @@ body {
 }
 #__next #header .login-container .btn {
   height: max-content;
+}
+#__next #header .login-container .btn .bi-person {
+  display: none;
 }
 #__next #header .login-container #burger {
   display: none;
@@ -337,6 +337,9 @@ body {
     padding: 0;
     box-shadow: none;
   }
+  #__next #header .login-container .btn .bi-person {
+    display: block;
+  }
   #__next #header .login-container .btn span {
     display: none;
   }
@@ -360,20 +363,21 @@ body {
   min-height: 100vh;
 }
 #__next .hero {
-  padding: 120px 0 90px;
+  padding: 90px 0;
 }
 #__next .hero .txt-content {
   color: #171E49;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  height: 100%;
 }
 #__next .hero .txt-content .title {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 700;
 }
 #__next .hero .txt-content .description {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 400;
   margin-bottom: 30px;
 }
@@ -454,12 +458,13 @@ body {
 }
 #__next .expertises .title-container .title {
   text-align: center;
-  font-size: 42px;
+  font-size: 28px;
   font-weight: 700;
+  margin-bottom: 30px;
 }
 #__next .expertises .title-container .description {
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
 }
 #__next .expertises .cards {
@@ -501,7 +506,7 @@ body {
   margin-top: 15px;
 }
 #__next .expertises .cards .card .description {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 400;
 }
 @media screen and (max-width: 425px) {
@@ -557,14 +562,18 @@ body {
 }
 #__next .services .service .txt-content {
   padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 #__next .services .service .txt-content .title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 #__next .services .service .txt-content .description {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -617,17 +626,18 @@ body {
   max-height: 600px;
 }
 #__next .prestations .container .txt-content {
+  padding-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 #__next .prestations .container .txt-content > .title {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 #__next .prestations .container .txt-content > .description {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   margin-bottom: 20px;
 }
@@ -663,7 +673,7 @@ body {
   align-items: center;
 }
 #__next .prestations .container .txt-content .prestas .presta .txt .title {
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 500;
   margin: 0;
 }
@@ -721,14 +731,14 @@ body {
 }
 #__next .newsletter .container .title {
   text-align: center;
-  font-size: 42px;
+  font-size: 32px;
   margin-top: 0;
   margin-bottom: 20px;
   font-weight: 700;
 }
 #__next .newsletter .container .description {
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 50px;
 }
 #__next .newsletter .container .description p {
@@ -1100,156 +1110,81 @@ body {
   font-size: 20px;
   text-align: center;
 }
-#__next .proprietaires .sections {
+#__next .proprietaires .first-section .txt-content {
+  height: 100%;
+  padding-left: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#__next .proprietaires .first-section .txt-content .title {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+#__next .proprietaires .first-section .txt-content .description {
+  font-size: 16px;
+}
+#__next .proprietaires .cards {
+  margin-top: 90px;
+}
+#__next .proprietaires .cards .card {
+  border: 1px solid #EEE;
+  border-radius: 30px;
+  padding: 30px 15px;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
   align-items: center;
+}
+#__next .proprietaires .cards .card:last-of-type {
+  margin-right: 0;
+}
+#__next .proprietaires .cards .card .icon {
+  border-radius: 30px;
+  height: 60px;
+  width: 60px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 5px #00000022;
+  min-height: 60px;
+}
+#__next .proprietaires .cards .card .icon img {
+  height: 30px;
+  width: auto;
+}
+#__next .proprietaires .cards .card .title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  margin-top: 15px;
+}
+#__next .proprietaires .cards .card .description {
+  font-size: 16px;
+  font-weight: 400;
+}
+#__next .proprietaires .sections {
   padding: 90px 0;
 }
 #__next .proprietaires .sections .section {
   margin-top: 90px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
 }
-#__next .proprietaires .sections .section:nth-of-type(2n) div:first-of-type {
-  order: 2;
-}
-#__next .proprietaires .sections .section:nth-of-type(2n) div:last-of-type {
-  order: 1;
-}
-#__next .proprietaires .sections .section.first-section .image {
-  width: 100%;
-}
-#__next .proprietaires .sections .section.first-section .txt-content {
-  width: 100%;
+#__next .proprietaires .sections .section .txt-content {
+  height: 100%;
+  padding-left: 30px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 90px;
-}
-#__next .proprietaires .sections .section.first-section .txt-content .title {
-  width: 100%;
-}
-#__next .proprietaires .sections .section.first-section .cards {
-  width: 100%;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: 50px;
-}
-#__next .proprietaires .sections .section.first-section .cards .card {
-  width: 32%;
-}
-#__next .proprietaires .sections .section.first-section .cards .card .txt-content {
-  width: 100%;
-}
-#__next .proprietaires .sections .section > .image {
-  width: 30%;
-  display: flex;
   justify-content: center;
 }
-#__next .proprietaires .sections .section > .image img {
-  max-height: 500px;
-  width: 100%;
-}
-#__next .proprietaires .sections .section > .txt-content {
-  width: 50%;
-  margin-top: 3%;
-  padding: 0 30px;
-}
-#__next .proprietaires .sections .section > .txt-content > .title {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-#__next .proprietaires .sections .section > .txt-content > .description {
-  font-size: 20px;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-#__next .proprietaires .sections .section > .txt-content .cards {
-  display: flex;
-  flex-direction: row;
-}
-#__next .proprietaires .sections .section > .txt-content .cards .card {
+#__next .proprietaires .sections .section .txt-content .title {
+  font-size: 24px;
   margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  width: 30%;
-  border: 1px solid #f0f0f0;
-  padding: 30px;
-  border-radius: 30px;
 }
-#__next .proprietaires .sections .section > .txt-content .cards .card .icon {
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 2px 2px 5px #00000022;
-  margin-bottom: 10px;
-}
-#__next .proprietaires .sections .section > .txt-content .cards .card .icon img {
-  height: 30px;
-  width: auto;
-}
-#__next .proprietaires .sections .section > .txt-content .cards .card .txt-content {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-#__next .proprietaires .sections .section > .txt-content .cards .card .txt-content .title {
-  font-size: 22px;
-  font-weight: 500;
-  margin: 0;
-}
-#__next .proprietaires .sections .section > .txt-content .cards .card .txt-content .description {
-  font-size: 18px;
-}
-#__next .proprietaires .sections .section .cards {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-#__next .proprietaires .sections .section .cards .card {
-  margin-bottom: 30px;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #f0f0f0;
-  padding: 30px;
-  border-radius: 30px;
-}
-#__next .proprietaires .sections .section .cards .card .icon {
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 2px 2px 5px #00000022;
-  margin-bottom: 10px;
-}
-#__next .proprietaires .sections .section .cards .card .icon img {
-  height: 30px;
-  width: auto;
-}
-#__next .proprietaires .sections .section .cards .card .txt-content {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-#__next .proprietaires .sections .section .cards .card .txt-content .title {
-  font-size: 22px;
-  font-weight: 500;
-  margin: 0;
-}
-#__next .proprietaires .sections .section .cards .card .txt-content .description {
-  font-size: 18px;
+#__next .proprietaires .sections .section .txt-content .description {
+  font-size: 16px;
 }
 #__next .proprietaires .sections .garanties {
   display: flex;
@@ -1682,13 +1617,13 @@ body {
 }
 #__next .registration .container .title {
   text-align: center;
-  font-size: 42px;
+  font-size: 32px;
   margin-top: 0;
   margin-bottom: 20px;
 }
 #__next .registration .container .description {
   text-align: center;
-  font-size: 22px;
+  font-size: 18px;
   margin-bottom: 50px;
 }
 #__next .registration .container .description p {
