@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Markdown from 'markdown-to-jsx'
 import RegistrationForm from '../sections/components/registration-form'
 
@@ -16,7 +20,9 @@ export default function Investisseurs(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="about-us fadeIn">
-            <div className="container">
+        <Container>
+          <Row className="justify-content-center">
+            <Col xs={12} sm={10} md={9}>
                 <h1 className="title">{data.title}</h1>
                 <div className="text-content">
                     {data.text_content.map((paragraphe) =>
@@ -35,15 +41,23 @@ export default function Investisseurs(props) {
                         <p>{data.email}</p>
                     </div>
                 </div>
-                <div className="registration">
-                    <div className="container">
-                        <h2 className="title">{data.registration.title}</h2>
-                        <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.registration.description}</Markdown>
-                        <RegistrationForm />
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+            <Row>
+                <Col xs={12}>
+                    <div className="registration">
+                        <div className="container">
+                            <h2 className="title">{data.registration.title}</h2>
+                            <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.registration.description}</Markdown>
+                            <RegistrationForm />
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
+                </Col>
+            </Row>
+        </Container>
+      </div>
     </div>
   )
 }
