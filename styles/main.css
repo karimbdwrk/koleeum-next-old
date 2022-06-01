@@ -1531,11 +1531,8 @@ body {
   text-align: center;
   margin-bottom: 90px;
 }
-#__next .blog .container .cards {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 32% 32% 32%;
-  grid-gap: 2%;
+#__next .blog .container .cards .container {
+  padding: 0;
 }
 #__next .blog .container .cards .card {
   border: 1px solid #ccc;

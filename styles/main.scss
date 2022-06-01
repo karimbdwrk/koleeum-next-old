@@ -1976,10 +1976,10 @@ body {
             }
 
             .cards {
-                width: 100%;
-                display: grid;
-                grid-template-columns: 32% 32% 32%;
-                grid-gap: 2%;
+
+                .container {
+                    padding: 0;
+                }
 
                 .card {
                     border: 1px solid #ccc;

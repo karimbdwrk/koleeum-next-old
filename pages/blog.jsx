@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
+import Image from 'next/image'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
 import Markdown from 'markdown-to-jsx'
 import BlogModal from '../sections/components/blog-modal'
 import Button from 'react-bootstrap/Button'
@@ -32,34 +36,40 @@ export default function Blog(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="blog fadeIn">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
+        <Container>
+          <Row>
+            <Col xs={12}>
               <h1 className="title">{data.title}</h1>
               <p className="description">{data.description}</p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12">
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
               <div className="cards">
-                { posts.map(function(post) {
-                  return ( 
-                    <div key={post.title} className="card">
-                      <div className="card-thumbnail">
-                        <img src={post.image.url} />
-                      </div>
-                      <div className="card-txt">
-                        <h3 className="card-title">{post.title}</h3>
-                        <div className="card-description">{post.description}</div>
-                        <BlogModal post={post} />
-                      </div>
-                    </div> 
-                  )
-                })}
+                <Container>
+                  <Row>
+                    { posts.map(function(post) {
+                      return ( 
+                        <Col key={post.title} xs={12} sm={6} md={4}>
+                          <div className="card">
+                            <div className="card-thumbnail">
+                              <img src={post.image.url} />
+                            </div>
+                            <div className="card-txt">
+                              <h3 className="card-title">{post.title}</h3>
+                              <div className="card-description">{post.description}</div>
+                              <BlogModal post={post} />
+                            </div>
+                          </div> 
+                        </Col>
+                      )
+                    })}
+                  </Row>
+                </Container>
               </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          </Row>
+        </Container>
       </div>
     </div>
   )
