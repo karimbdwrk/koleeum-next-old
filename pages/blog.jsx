@@ -38,7 +38,7 @@ export default function Blog(props) {
       <div className="blog fadeIn">
         <Container>
           <Row>
-            <Col xs={12}>
+            <Col xs={12} className="title-container">
               <h1 className="title">{data.title}</h1>
               <p className="description">{data.description}</p>
             </Col>

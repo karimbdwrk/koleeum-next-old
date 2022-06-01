@@ -1955,18 +1955,18 @@ body {
             .row {
                 width: 100%;
 
-                .col-12 {
+                .title-container {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
 
-                    & > .title {
+                    .title {
                         font-size: 42px;
                         text-align: center;
                         margin-bottom: 0;
                     }
         
-                    & > .description {
+                    .description {
                         font-size: 18px;
                         text-align: center;
                         margin-bottom: 90px;
@@ -2036,6 +2036,36 @@ body {
                             justify-self: flex-end;
                         }
                     }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width:425px) {
+        .blog {
+            padding: 60px 0;
+
+            .container {
+                .row {
+            
+                    .title-container {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+            
+                        .title {
+                            font-size: 24px;
+                            text-align: center;
+                            margin-bottom: 30px;
+                        }
+            
+                        .description {
+                            font-size: 18px;
+                            text-align: center;
+                        }
+                    }
+
                 }
             }
         }

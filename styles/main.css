@@ -1516,17 +1516,17 @@ body {
 #__next .blog .container .row {
   width: 100%;
 }
-#__next .blog .container .row .col-12 {
+#__next .blog .container .row .title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-#__next .blog .container .row .col-12 > .title {
+#__next .blog .container .row .title-container .title {
   font-size: 42px;
   text-align: center;
   margin-bottom: 0;
 }
-#__next .blog .container .row .col-12 > .description {
+#__next .blog .container .row .title-container .description {
   font-size: 18px;
   text-align: center;
   margin-bottom: 90px;
@@ -1579,6 +1579,26 @@ body {
   bottom: 15px;
   align-self: flex-end;
   justify-self: flex-end;
+}
+@media screen and (max-width: 425px) {
+  #__next .blog {
+    padding: 60px 0;
+  }
+  #__next .blog .container .row .title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #__next .blog .container .row .title-container .title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  #__next .blog .container .row .title-container .description {
+    font-size: 18px;
+    text-align: center;
+  }
 }
 #__next .post {
   display: flex;
