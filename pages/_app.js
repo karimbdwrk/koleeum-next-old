@@ -1,4 +1,6 @@
+// import { SessionProvider } from "next-auth/react"
 import { useState, useEffect, useLayoutEffect } from 'react'
+import { useFetchUser, UserProvider } from "../lib/authContext"
 import Link from 'next/link'
 import Layout from './layout'
 import Header from '../sections/globals/header'
@@ -7,34 +9,22 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import '../styles/globals.css'
 import '../styles/main.css'
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ 
+  Component, 
+  pageProps: { ...pageProps }, 
+}) {
 
-  const [data, setData] = useState(null)
-  const [isLoading, setLoading] = useState(false)
-  const [isActive, setActive] = useState('/')
-
-  useEffect(() => {
-      setLoading(true)
-      fetch('https://koleeum-admin.herokuapp.com/global')
-      .then((res) => res.json())
-      .then((data) => {
-          setData(data)
-          setLoading(false)
-      })
-  }, [])
-
-  if (isLoading) return <p>Loading...</p>
-  if (!data) return <p>No profile data</p>
-
-  if (!data) return console.log('data :', data)
+  const { user, loading } = useFetchUser()
 
   return ( 
     <>
-      <Header />
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
-      <Footer />
+      <UserProvider value={{ user, loading }}>
+        <Header />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+        <Footer />
+      </UserProvider>
     </>
   )
 }
