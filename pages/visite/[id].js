@@ -14,8 +14,6 @@ const Visite = ({ visite }) => {
 //       console.log('load sucess pdf !')
 //   }
 
-    
-
   return (
     <>
 
