@@ -2,10 +2,18 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { toString } from 'lodash';
 import { Document, Page } from 'react-pdf'
+import { getTokenFromServerCookie, getTokenFromLocalCookie, getUserFromLocalCookie } from '../../lib/auth';
+import { fetcher } from '../../lib/api';
 
 const Visite = ({ visite }) => {
   const router = useRouter()
   const { id } = router.query
+  console.log(visite.error ? visite.error : visite.title)
+
+//   console.log('get token :', getTokenFromServerCookie(req))
+//   console.log('get user :', getUserFromLocalCookie())
+
+//   const username = getUserFromLocalCookie()
 
 //   const [numPages, setNumPages] = useState(null);
 //   const [pageNumber, setPageNumber] = useState(1);
@@ -24,7 +32,7 @@ const Visite = ({ visite }) => {
         {/* <Document file={visite.document[0].doc.url} onLoadSuccess={onDocumentLoadSuccess}>
             <Page pageNumber={pageNumber} />
         </Document> */}
-        {/* <iframe src={visite.document[0].doc.url + '#toolbar=0'} width="100%" height="990"></iframe> */}
+        <iframe src={visite.document[0].doc.url + '#toolbar=0'} width="100%" height="990"></iframe>
         {/* <p>Page {pageNumber} of {numPages}</p> */}
     </>
   ) 
@@ -32,26 +40,32 @@ const Visite = ({ visite }) => {
 
 export default Visite
 
-export async function getStaticPaths() {
-    const res = await fetch('https://koleeum-admin.herokuapp.com/visites')
-    const data = await res.json()
+// export async function getStaticPaths() {
+//     const res = await fetch('https://koleeum-admin.herokuapp.com/visites')
+//     const data = await res.json()
 
-    const paths = data.map(visite => {
-        return {
-            params: { id: visite.id.toString() }
-        }
-    })
+//     const paths = data.map(visite => {
+//         return {
+//             params: { id: visite.id.toString() }
+//         }
+//     })
 
-    return {
-        paths,
-        fallback: false
-    }
-}
+//     return {
+//         paths,
+//         fallback: false
+//     }
+// }
 
-export async function getStaticProps(context) {
-    const id = context.params.id
-    const res = await fetch('https://koleeum-admin.herokuapp.com/visites/' + id)
-    const data = await res.json()
+export async function getServerSideProps({req, params}) {
+    const id = params.id
+    const jwt = typeof window !== 'undefined' ? getTokenFromLocalCookie : getTokenFromServerCookie(req)
+    const data = await fetcher(`https://koleeum-admin.herokuapp.com/visites/${id}`, jwt ? {
+        headers: {
+            Authorization: `Bearer ${jwt}`,
+        },
+    } : '')
+    // const res = await fetch(`https://koleeum-admin.herokuapp.com/visites/${id}`)
+    // const data = await res
 
     return {
         props: { visite: data }

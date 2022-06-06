@@ -62,9 +62,9 @@ const LoginPage = () => {
                 {!loading &&
                     (user ? (
                     <li>
-                        <Link href="/profile">
+                        <Link href="/espace-client">
                         <a className="md:p-2 py-2 block hover:text-purple-400">
-                            Profile
+                            Espace Client
                         </a>
                         </Link>
                     </li>
