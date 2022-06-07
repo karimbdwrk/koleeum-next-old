@@ -6,7 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
-function VisitesList() {
+function VisitesList({user}) {
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
 
@@ -25,16 +25,31 @@ function VisitesList() {
 
     if (!data) return console.log('visites liste :', data)
 
-    const links = data.map(function(link) {
-        return (
-            <li key={link.id}>
-                <Link key={link.id} href={`/visite/${encodeURIComponent(link.id)}`}>
-                    <a>
-                        {link.title}
-                    </a>
-                </Link>
-            </li>
-        )
+
+    let visites = []
+    
+    data.map(visite => {
+        visite.users_permissions_users.map(userP => {
+            if (userP.username === user) {
+                visites.push(visite)
+            }
+        })
+
+    })
+    console.log('visites :', visites)
+
+    const links = visites.map(function(link) {
+        if (link) {
+            return (
+                <li key={link.id}>
+                    <Link key={link.id} href={`/visite/${encodeURIComponent(link.id)}`}>
+                        <a>
+                            {link.title}
+                        </a>
+                    </Link>
+                </li>
+            )
+        }
     })
 
     return (

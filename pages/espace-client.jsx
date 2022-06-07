@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useUser } from '../lib/authContext'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
@@ -12,6 +13,8 @@ import VisitesList from '../sections/list-visites'
 export default function EspaceClient(props) {
 
   const [data, setData] = useState(props.data)
+  const { user, loading } = useUser()
+
 
   return (
     <div className="espace-client-page">
@@ -24,20 +27,39 @@ export default function EspaceClient(props) {
             <Container className="title-container">
                 <Row className="justify-content-center">
                     <Col xs="12" sm={10} md={8}>
-                        <h1 className="title">{data.title}</h1>
+                        <h1 className="title">{data.title + ' ' + user}</h1>
                         <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{data.description}</Markdown>
                     </Col>
                 </Row>
             </Container>
-            <Container>
-                <Row>
-                    <Col xs={12}>
-                        <div className="visites-container">
-                            <VisitesList />
-                        </div>
-                    </Col>
-                </Row>
-            </Container>
+            {!loading &&
+                (user ? (
+                    <Container>
+                        <Row>
+                            <Col xs={12}>
+                                <div className="visites-container">
+                                    <VisitesList user={user} />
+                                </div>
+                            </Col>
+                        </Row>
+                    </Container>
+                ) : (
+                ''
+            ))}
+            {!loading &&
+                (!user ? (
+                    <Container>
+                        <Row>
+                            <Col xs={12}>
+                                <Link href='login'>
+                                    <a>Login</a>
+                                </Link>
+                            </Col>
+                        </Row>
+                    </Container>
+                ) : (
+                ''
+            ))}
             {/* <Container>
                 <Row>
                     <Col xs={12}>
