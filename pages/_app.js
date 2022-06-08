@@ -19,7 +19,7 @@ function MyApp({
   return ( 
     <>
       <UserProvider value={{ user, loading }}>
-        <Header />
+        <Header user={user} />
         <Layout>
           <Component {...pageProps} />
         </Layout>

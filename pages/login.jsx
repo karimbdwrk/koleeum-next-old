@@ -54,7 +54,7 @@ const LoginPage = () => {
                             <input type="text" placeholder="Identifiant" name="identifier" onChange={handleChange} />
                             <input type="password" placeholder="Mot de passe" name="password" onChange={handleChange} />
                             <a href="#">Mot de passe oublié</a>
-                            <button alt="Pas encore disponible" className="btn disabled" type="submit">Me connecter</button>
+                            <button alt="Pas encore disponible" className="btn" type="submit">Me connecter</button>
                         </form>
                         <div className="sign-up">
                             <p>Pas encore de compte ? <a href="/evaluation">M'inscrire</a></p>
