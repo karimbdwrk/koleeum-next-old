@@ -2,8 +2,12 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { toString } from 'lodash';
 import { Document, Page } from 'react-pdf'
-import { getTokenFromServerCookie, getTokenFromLocalCookie, getUserFromLocalCookie } from '../../lib/auth';
-import { fetcher } from '../../lib/api';
+import { getTokenFromServerCookie, getTokenFromLocalCookie, getUserFromLocalCookie } from '../../lib/auth'
+import { fetcher } from '../../lib/api'
+import Container from 'react-bootstrap/Container'
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Markdown from 'markdown-to-jsx'
 
 const Visite = ({ visite }) => {
   const router = useRouter()
@@ -23,18 +27,21 @@ const Visite = ({ visite }) => {
 //   }
 
   return (
-    <>
-
-        <p>Visite: {id}</p>
-        <p>{visite.title}</p>
-        <p>{visite.description}</p>
-        {/* <p>{visite.document[0].doc.url}</p> */}
-        {/* <Document file={visite.document[0].doc.url} onLoadSuccess={onDocumentLoadSuccess}>
-            <Page pageNumber={pageNumber} />
-        </Document> */}
-        <iframe src={visite.document[0].doc.url + '#toolbar=0'} width="100%" height="990"></iframe>
-        {/* <p>Page {pageNumber} of {numPages}</p> */}
-    </>
+      <Container>
+          <Row>
+              <Col xs={12}>
+                    <p>Visite: {id}</p>
+                    <h1 className="title">{visite.title}</h1>
+                    <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{visite.description}</Markdown>
+                    {/* <p>{visite.document[0].doc.url}</p> */}
+                    {/* <Document file={visite.document[0].doc.url} onLoadSuccess={onDocumentLoadSuccess}>
+                        <Page pageNumber={pageNumber} />
+                    </Document> */}
+                    <iframe src={visite.document[0].doc.url + '#toolbar=0'} width="100%" height="990"></iframe>
+                    {/* <p>Page {pageNumber} of {numPages}</p> */}
+              </Col>
+          </Row>
+      </Container>
   ) 
 }
 

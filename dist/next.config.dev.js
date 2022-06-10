@@ -11,11 +11,11 @@ module.exports = {
         switch (_context.prev = _context.next) {
           case 0:
             return _context.abrupt("return", [{
-              source: '*/visite/investisseurs',
+              source: '/visite/investisseurs',
               destination: '/investisseurs',
               permanent: true
             }, {
-              source: '*/visite/espace-client',
+              source: '/visite/espace-client',
               destination: '/espace-client',
               permanent: true
             }]);
