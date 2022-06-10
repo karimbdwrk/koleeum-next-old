@@ -24,6 +24,13 @@ function Footer() {
         })
     }, [])
 
+
+    let myUrl = ''
+    useEffect(() => {
+        myUrl = window.location.origin
+        console.log('my URL :', myUrl)
+    })
+
     if (isLoading) return <p>Loading...</p>
     if (!data) return <p>No profile data</p>
 
@@ -52,7 +59,7 @@ function Footer() {
                                 { column.link.map((l, index) => {
                                 return (
                                     <li key={index}>
-                                        <Link key={index} href={l.link}><a className="hvr-underline-from-left">{l.title}</a></Link>
+                                        <Link key={index} href={myUrl + '/' + l.link}><a className="hvr-underline-from-left">{l.title}</a></Link>
                                     </li>
                                     )
                                 }) 
