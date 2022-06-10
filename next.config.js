@@ -1,14 +1,5 @@
 module.exports = {
   reactStrictMode: true,
-  async redirects() {
-    return [
-      {
-        source: '/visite/:slug(\\d{1,})',
-        destination: '/:slug', // Matched parameters can be used in the destination
-        permanent: false,
-      },
-    ]
-  },
   images: {
     domains: ['koleeum-aws-bucket.s3.eu-west-3.amazonaws.com'],
   }
