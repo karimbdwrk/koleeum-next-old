@@ -34,7 +34,7 @@ const Visite = (props) => {
 
     const list = visite.document.map(function(docu) {
         return (
-            <Row>
+            <Row key={docu.id}>
                 <Col xs={12}>
                     <h3 className="title">{docu.title}</h3>
                     <iframe src={docu.doc.url + '#toolbar=0'} width="100%" height="990"></iframe>
