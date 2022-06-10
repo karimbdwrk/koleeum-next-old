@@ -8,11 +8,17 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Markdown from 'markdown-to-jsx'
+import { DeprecatedLayoutGroupContext } from 'framer-motion';
 
-const Visite = ({ visite }) => {
+const Visite = (props) => {
   const router = useRouter()
   const { id } = router.query
-  console.log(visite.error ? visite.error : visite.title)
+//   console.log(visite.error ? visite.error : visite.title)
+
+  const [visite, setVisite] = useState(props.visite)
+    // visite.document.map(docu => {
+    //     console.log(docu.title)
+    // })
 
 //   console.log('get token :', getTokenFromServerCookie(req))
 //   console.log('get user :', getUserFromLocalCookie())
@@ -26,18 +32,27 @@ const Visite = ({ visite }) => {
 //       console.log('load sucess pdf !')
 //   }
 
+    const list = visite.document.map(function(docu) {
+        return (
+            <Row>
+                <Col xs={12}>
+                    <h3 className="title">{docu.title}</h3>
+                    <iframe src={docu.doc.url + '#toolbar=0'} width="100%" height="990"></iframe>
+                </Col>
+            </Row>
+        )
+    })
+
   return (
-      <Container>
+      <Container className="visite-page">
           <Row>
               <Col xs={12}>
-                    <p>Visite: {id}</p>
+                    {/* <p>Visite: {id}</p> */}
                     <h1 className="title">{visite.title}</h1>
                     <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{visite.description}</Markdown>
-                    {/* <p>{visite.document[0].doc.url}</p> */}
-                    {/* <Document file={visite.document[0].doc.url} onLoadSuccess={onDocumentLoadSuccess}>
-                        <Page pageNumber={pageNumber} />
-                    </Document> */}
-                    <iframe src={visite.document[0].doc.url + '#toolbar=0'} width="100%" height="990"></iframe>
+                    <Container className="list-visites">
+                        {list}
+                    </Container>
                     {/* <p>Page {pageNumber} of {numPages}</p> */}
               </Col>
           </Row>
