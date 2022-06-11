@@ -15,7 +15,7 @@ const Logement = (props) => {
 
   const [logement, setLogement] = useState(props.logement)
 
-  const slider = logement.photos.map(photo => <SwiperSlide><img src={photo.url} /></SwiperSlide>)
+  const slider = logement.photos.map(photo => <SwiperSlide key={photo.id}><img src={photo.url} /></SwiperSlide>)
 
 
   return (
@@ -42,7 +42,7 @@ const Logement = (props) => {
                         onSlideChange={() => console.log('slide change')}
                         onSwiper={(swiper) => console.log(swiper)}
                         >
-                        <SwiperSlide><img src={logement.cover.url} /></SwiperSlide>
+                        <SwiperSlide key="cover"><img src={logement.cover.url} /></SwiperSlide>
                         {slider}
                     </Swiper>
                 </Col>
