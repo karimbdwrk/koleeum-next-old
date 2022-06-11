@@ -16,13 +16,10 @@ function Header({ user }) {
     const [isLoading, setLoading] = useState(false)
     const [isActive, setActive] = useState('/')
     const [isOpen, setOpen] = useState(false)
-    let myUrl = ''
+    const [myUrl, setMyUrl] = useState('')
 
     useEffect(() => {
-
-        myUrl = window.location.origin
-        console.log('my URL :', myUrl)
-
+        setMyUrl(window.location.origin)
     })
 
     useEffect(() => {

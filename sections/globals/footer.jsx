@@ -13,6 +13,7 @@ function Footer() {
     const [data, setData] = useState(null)
     const [isLoading, setLoading] = useState(false)
     const [isActive, setActive] = useState('/')
+    const [myUrl, setMyUrl] = useState('')
 
     useEffect(() => {
         setLoading(true)
@@ -25,10 +26,8 @@ function Footer() {
     }, [])
 
 
-    let myUrl = ''
     useEffect(() => {
-        myUrl = window.location.origin
-        console.log('my URL :', myUrl)
+        setMyUrl(window.location.origin)
     })
 
     if (isLoading) return <p>Loading...</p>
