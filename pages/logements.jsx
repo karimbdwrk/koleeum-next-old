@@ -9,7 +9,7 @@ import Markdown from 'markdown-to-jsx'
 import RegistrationForm from '../sections/components/registration-form'
 import LogementsList from '../sections/list-logements'
 
-export default function Investisseurs(props) {
+export default function Offres(props) {
 
   const [data, setData] = useState(props.data)
 
