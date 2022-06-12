@@ -37,17 +37,18 @@ function LogementsList() {
                             <Card.Img variant="top" src={logement.cover.url} />
                         </div>
                         <Card.Body>
-                            <Card.Title>{logement.title}</Card.Title>
-                            <Card.Text>
-                                <div className="tags">
-                                    {logement.ville_quartier && <p>{logement.ville_quartier}</p>}
-                                    {logement.nbr_pieces && <p>{logement.nbr_pieces} pièce{logement.nbr_pieces > 1 ? 's' : ''}</p>}
-                                    {logement.surface && <p>{logement.surface} m2</p>}
-                                    {logement.etage && <p>{logement.etage}{logement.etage > 1 ? 'ème' : 'er'} étage</p>}
-                                    {logement.type == 'location' && <p>{logement.loyer}€ / mois</p>}
-                                    {logement.type == 'achat' && <p>{logement.prix}€</p>}
-                                </div>
-                            </Card.Text>
+                            <Card.Title>
+                                {logement.title}
+                                {logement.ville_quartier && <p className="subtitle">{logement.ville_quartier}</p>}
+                                {logement.type && <p className="type">{logement.type}</p>}
+                            </Card.Title>
+                            <div className="tags">
+                                {logement.nbr_pieces && <p>{logement.nbr_pieces} pièce{logement.nbr_pieces > 1 ? 's' : ''}</p>}
+                                {logement.surface && <p>{logement.surface} &#13217;</p>}
+                                {logement.etage && <p>Étage {logement.etage}</p>}
+                                {logement.type == 'location' && <p>{logement.loyer}€/mois</p>}
+                                {logement.type == 'achat' && <p>{logement.prix}€</p>}
+                            </div>
                         </Card.Body>
                     </Card>
                     </a>

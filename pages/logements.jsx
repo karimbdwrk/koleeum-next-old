@@ -36,7 +36,7 @@ export default function Offres(props) {
                     </Col>
                 </Row>
             </Container>
-            {/* <Container>
+            <Container>
                 <Row>
                     <Col xs={12}>
                         <div className="registration">
@@ -48,7 +48,7 @@ export default function Offres(props) {
                         </div>
                     </Col>
                 </Row>
-            </Container> */}
+            </Container>
         </div>
     </div>
   )

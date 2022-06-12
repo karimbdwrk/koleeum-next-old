@@ -1640,6 +1640,116 @@ body {
 #__next .post .container .post-date {
   text-align: right;
 }
+#__next .offres-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 90px 0;
+}
+#__next .offres-page .title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#__next .offres-page .title-container .title {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 0;
+}
+#__next .offres-page .title-container .description {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 90px;
+}
+#__next .offres-page .logements-list a:hover {
+  color: #303030;
+}
+#__next .offres-page .logements-list .card {
+  height: 100%;
+}
+#__next .offres-page .logements-list .card .img-container {
+  max-height: 250px;
+  overflow-y: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#__next .offres-page .logements-list .card .card-body .card-title .subtitle {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+#__next .offres-page .logements-list .card .card-body .card-title .type {
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+#__next .offres-page .logements-list .card .card-body .tags {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+}
+#__next .offres-page .logements-list .card .card-body .tags p {
+  font-size: 14px;
+  padding: 6px 10px;
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+#__next .logement-page {
+  padding: 90px 0;
+}
+#__next .logement-page .col-12 {
+  height: 100%;
+  overflow: visible;
+}
+#__next .logement-page .txt-container {
+  padding-right: 90px;
+}
+#__next .logement-page .txt-container .subtitle {
+  font-size: 18px;
+  color: #606060;
+}
+#__next .logement-page .txt-container .type {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+#__next .logement-page .txt-container h3.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-top: 30px;
+}
+#__next .logement-page .txt-container .tags {
+  display: flex;
+  justify-content: space-between;
+  max-width: 450px;
+  padding-top: 15px;
+}
+#__next .logement-page .txt-container .tags p {
+  padding: 6px 12px;
+  border: 1px solid #000;
+  border-radius: 3px;
+  font-size: 14px;
+}
+#__next .logement-page .swiper {
+  position: sticky;
+  top: 0;
+}
+#__next .logement-page .swiper .swiper-button-prev::after, #__next .logement-page .swiper .swiper-button-next::after {
+  color: #FFF;
+}
+#__next .logement-page .swiper .swiper-button-prev {
+  left: 25px;
+}
+#__next .logement-page .swiper .swiper-button-next {
+  right: 25px;
+}
+#__next .logement-page .col-contact {
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
 #__next .login-page {
   padding: 90px 0;
   height: 60vh;

@@ -57,7 +57,7 @@ function Header({ user }) {
         <header id="header">
             <Container>
                 <Row>
-                    <Col xs={8} sm={3} className="logo-container">
+                    <Col xs={8} sm={2} className="logo-container">
                         <div className='logo'>
                             <Link href='/'>
                                 <a onClick={() => setActive('/')}>
@@ -71,12 +71,23 @@ function Header({ user }) {
                             </Link>
                         </div>
                     </Col>
-                    <Col xs={12} sm={6} className={isOpen ? 'nav-container open' : 'nav-container'}>
+                    <Col xs={12} sm={8} className={isOpen ? 'nav-container open' : 'nav-container'}>
                         <nav>
                             {navLinks}
+                            <Link key="loge" href={myUrl + '/logements'}>
+                                <a 
+                                    className={isActive === 'logements' ? 'hvr-underline-from-left active' : 'hvr-underline-from-left'} 
+                                    onClick={() => { 
+                                        setActive('logements') 
+                                        setOpen(false)
+                                    }}
+                                >
+                                    Logements
+                                </a>
+                            </Link>
                         </nav>
                     </Col>
-                    <Col xs={4} sm={3} className="login-container">
+                    <Col xs={4} sm={2} className="login-container">
                         { !user ? 
                             <Link href={myUrl + '/login'}>
                                 <a className="btn">
