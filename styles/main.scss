@@ -178,7 +178,7 @@ $dark-color: #171E49;
     background-color: #4270ED!important;
     color: #FFFFFF!important;
     border: 0;
-    border-radius: 30px!important;
+    border-radius: 5px!important;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px!important;
     font-weight: 500!important;
@@ -343,7 +343,7 @@ body {
 
                 &.open {
                     padding-top: 25px;
-                    height: 180px;
+                    height: 250px;
                     opacity: 1;
                     transition: all 250ms ease;
                 }
@@ -354,7 +354,7 @@ body {
                     flex-direction: column;
                     align-items: flex-start;
                     justify-content: space-around;
-                    height: 150px;
+                    height: 220px;
     
                     a {
                         vertical-align: bottom;
@@ -563,7 +563,7 @@ body {
 
             .card {
                 border: 1px solid #EEE;
-                border-radius: 30px;
+                border-radius: 5px;
                 padding: 30px 15px;
                 height: 400px;
                 // margin-right: 60px;
@@ -907,7 +907,7 @@ body {
         .container {
             padding: 50px 0;
             border: 1px solid #eee;
-            border-radius: 30px;
+            border-radius: 5px;
             width: 80%;
 
 
@@ -953,8 +953,8 @@ body {
                         width: 500px;
                         max-width: 90vw;
                         padding: 15px 25px;
-                        border-top-left-radius: 30px;
-                        border-bottom-left-radius: 30px;
+                        border-top-left-radius: 5px;
+                        border-bottom-left-radius: 5px;
                         border: 1px solid #e7e7e7;
                         font-size: 16px;
                         color: #666;
@@ -970,7 +970,7 @@ body {
 
                     .btn {
                         transform: translateX(-20px);
-                        max-height: 50px;
+                        max-height: 56px;
                     }
 
                 }
@@ -1076,6 +1076,7 @@ body {
             .columns-container {
                 display: flex;
                 justify-content: space-between;
+                padding-right: 50px;
 
                 .column {
                     .title {
@@ -1131,14 +1132,14 @@ body {
                         input, textarea {
                             background-color: transparent;
                             border: 1px solid #666;
-                            border-radius: 30px;
+                            border-radius: 5px;
                             padding: 5px 10px 5px 15px;
                             color: $dark-color;
                             font-family: 'Montserrat', sans-serif;
-                            font-size: 14px;
+                            font-size: 16px;
                             
                             &::placeholder {
-                                font-size: 14px;
+                                font-size: 16px;
                             }
             
                             &:focus {
@@ -1165,7 +1166,7 @@ body {
                                 margin-bottom: 15px;
     
                                 textarea {
-                                    border-radius: 20px;
+                                    border-radius: 5px;
                                     padding-top: 15px;
                                     height: 80px;
                                 }
@@ -1255,6 +1256,7 @@ body {
                 .columns-container {
                     order: 2;
                     flex-direction: column;
+                    padding-right: 15px;
     
                     .column {
                         margin-bottom: 50px;
@@ -1453,7 +1455,7 @@ body {
 
             .card {
                 border: 1px solid #EEE;
-                border-radius: 30px;
+                border-radius: 5px;
                 padding: 30px 15px;
                 height: 100%;
                 // margin-right: 60px;
@@ -1984,8 +1986,8 @@ body {
                 .card {
                     border: 1px solid #ccc;
                     // height: 250px;
-                    margin-bottom: 15px;
-                    border-radius: 30px;
+                    margin-bottom: 30px;
+                    border-radius: 5px;
                     overflow: hidden;
 
                     .card-thumbnail {
@@ -1994,8 +1996,8 @@ body {
                         align-items: center;
                         overflow: hidden;
                         position: relative;
-                        height: 350px;
-                        min-height: 350px;
+                        height: 250px;
+                        min-height: 250px;
 
 
                         img {
@@ -2012,7 +2014,7 @@ body {
                         padding: 15px;
                         display: flex;
                         flex-direction: column;
-                        min-height: 350px;
+                        min-height: 280px;
 
                         .link {
                             color: $dark-color;
@@ -2151,6 +2153,11 @@ body {
                     color: #303030;
                 }
             }
+
+            .col-12 {
+                margin-bottom: 30px;
+            }
+
             .card {
                 height: 100%;
 
@@ -2295,6 +2302,85 @@ body {
 
     }
 
+    @media screen and (max-width:425px) {
+        .logement-page {
+            padding: 0 0 60px;
+
+            .container {
+                .row {
+                    flex-direction: column-reverse;
+                }
+            }
+    
+            .txt-container {
+                padding-right: 0px;
+                .subtitle {
+                    font-size: 18px;
+                    color: #606060;
+                }
+                .type {
+                    font-size: 16px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+                h3.title {
+                    font-size: 24px;
+                    font-weight: 600;
+                    margin-top: 30px;
+                }
+                .tags {
+                    display: flex;
+                    justify-content: space-between;
+                    max-width: 450px;
+                    padding-top: 15px;
+    
+                    p {
+                        padding: 6px 12px;
+                        border: 1px solid #000;
+                        border-radius: 3px;
+                        font-size: 14px;
+                    }
+                }
+            }
+    
+            .slider-container {
+                height: 100%;
+    
+                .swiper {
+                    margin-bottom: 30px;
+
+                    .swiper-wrapper {
+                        .swiper-slide {
+                            img {
+                                max-height: 250px;
+                            }
+                        }
+                    }
+        
+                    .swiper-button-prev, .swiper-button-next {
+                        &::after {
+                            color: #FFF;
+                        }
+                    }
+                    .swiper-button-prev {
+                        left: 25px;
+                    }
+                    .swiper-button-next {
+                        right: 25px;
+                    }
+                }
+    
+            }
+    
+            .col-contact {
+                display: flex;
+                justify-content: center;
+                padding: 30px 15px;
+            }
+    
+        }
+    }
+
     .login-page {
         padding: 90px 0;
         height: 60vh;
@@ -2325,7 +2411,7 @@ body {
                     // transform: translateX(-20px);
                     width: 100%;
                     padding: 15px 25px;
-                    border-radius: 30px;
+                    border-radius: 5px;
                     border: 1px solid #e7e7e7;
                     font-size: 16px;
                     color: #666;
@@ -2387,7 +2473,7 @@ body {
         .container {
             padding: 50px;
             border: 1px solid #eee;
-            border-radius: 30px;
+            border-radius: 5px;
             max-width: 80vw;
             display: flex;
             flex-direction: column;
@@ -2435,7 +2521,7 @@ body {
                         transform: translateX(20px);
                         width: 250px;
                         padding: 15px 25px;
-                        border-radius: 30px;
+                        border-radius: 5px;
                         border: 1px solid #e7e7e7;
                         font-size: 16px;
                         color: #666;
@@ -2452,7 +2538,7 @@ body {
 
                     .btn {
                         transform: translateX(-20px);
-                        max-height: 50px;
+                        max-height: 56px;
 
                         &:disabled {
                             opacity: .7;
@@ -2558,6 +2644,38 @@ body {
                         }
     
                     }
+                }
+            }
+        }
+    }
+
+    .espace-client-page {
+        padding-bottom: 90px;
+        
+        .espace-client {
+            .title-container .col-12 {
+                border: 1px solid #e7e7e7;
+                border-radius: 5px;
+                padding: 30px;
+                margin-top: 90px;
+                margin-bottom: 90px;
+
+                .title {
+                    font-size: 42px;
+                    margin-bottom: 30px;
+                }
+                .description {
+                    font-size: 18px;
+                }
+            }
+
+            .visites-container {
+                .title {
+
+                }
+                .visites-list {
+                    display: flex;
+                    flex-direction: column;
                 }
             }
         }
@@ -2702,7 +2820,7 @@ body {
                     width: 30%;
                     max-width: 30%;
                     border: 1px solid #eee;
-                    border-radius: 30px;
+                    border-radius: 5px;
                     padding: 30px;
                     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
                     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -2835,8 +2953,8 @@ body {
                         box-sizing: border-box; 
                         width: 100%;
                         max-width: 100%;
-                        padding: 15px 25px;
-                        border-radius: 30px;
+                        padding: 15px;
+                        border-radius: 5px;
                         border: 1px solid #e7e7e7;
                         font-size: 16px;
                         color: #666;

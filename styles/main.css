@@ -159,7 +159,7 @@ html {
   background-color: #4270ED !important;
   color: #FFFFFF !important;
   border: 0;
-  border-radius: 30px !important;
+  border-radius: 5px !important;
   font-family: "Montserrat", sans-serif;
   font-size: 16px !important;
   font-weight: 500 !important;
@@ -303,7 +303,7 @@ body {
   }
   #__next #header .nav-container.open {
     padding-top: 25px;
-    height: 180px;
+    height: 250px;
     opacity: 1;
     transition: all 250ms ease;
   }
@@ -313,7 +313,7 @@ body {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-around;
-    height: 150px;
+    height: 220px;
   }
   #__next #header .nav-container nav a {
     vertical-align: bottom;
@@ -472,7 +472,7 @@ body {
 }
 #__next .expertises .cards .card {
   border: 1px solid #EEE;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 30px 15px;
   height: 400px;
   display: flex;
@@ -726,7 +726,7 @@ body {
 #__next .newsletter .container {
   padding: 50px 0;
   border: 1px solid #eee;
-  border-radius: 30px;
+  border-radius: 5px;
   width: 80%;
 }
 #__next .newsletter .container .title {
@@ -767,8 +767,8 @@ body {
   width: 500px;
   max-width: 90vw;
   padding: 15px 25px;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border: 1px solid #e7e7e7;
   font-size: 16px;
   color: #666;
@@ -781,7 +781,7 @@ body {
 }
 #__next .newsletter .container .newsletter-form form .btn {
   transform: translateX(-20px);
-  max-height: 50px;
+  max-height: 56px;
 }
 @media screen and (max-width: 425px) {
   #__next .newsletter {
@@ -854,6 +854,7 @@ body {
 #__next footer.footer .container .columns-container {
   display: flex;
   justify-content: space-between;
+  padding-right: 50px;
 }
 #__next footer.footer .container .columns-container .column .title {
   font-size: 18px;
@@ -892,14 +893,14 @@ body {
 #__next footer.footer .container .contact-container .contact-form form input, #__next footer.footer .container .contact-container .contact-form form textarea {
   background-color: transparent;
   border: 1px solid #666;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 5px 10px 5px 15px;
   color: #171E49;
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 #__next footer.footer .container .contact-container .contact-form form input::placeholder, #__next footer.footer .container .contact-container .contact-form form textarea::placeholder {
-  font-size: 14px;
+  font-size: 16px;
 }
 #__next footer.footer .container .contact-container .contact-form form input:focus, #__next footer.footer .container .contact-container .contact-form form textarea:focus {
   outline: none;
@@ -921,7 +922,7 @@ body {
   margin-bottom: 15px;
 }
 #__next footer.footer .container .contact-container .contact-form form > div.textarea textarea {
-  border-radius: 20px;
+  border-radius: 5px;
   padding-top: 15px;
   height: 80px;
 }
@@ -980,6 +981,7 @@ body {
   #__next footer.footer .container .columns-container {
     order: 2;
     flex-direction: column;
+    padding-right: 15px;
   }
   #__next footer.footer .container .columns-container .column {
     margin-bottom: 50px;
@@ -1129,7 +1131,7 @@ body {
 }
 #__next .proprietaires .cards .card, #__next .locataires .cards .card {
   border: 1px solid #EEE;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 30px 15px;
   height: 100%;
   display: flex;
@@ -1536,8 +1538,8 @@ body {
 }
 #__next .blog .container .cards .card {
   border: 1px solid #ccc;
-  margin-bottom: 15px;
-  border-radius: 30px;
+  margin-bottom: 30px;
+  border-radius: 5px;
   overflow: hidden;
 }
 #__next .blog .container .cards .card .card-thumbnail {
@@ -1546,8 +1548,8 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
-  height: 350px;
-  min-height: 350px;
+  height: 250px;
+  min-height: 250px;
 }
 #__next .blog .container .cards .card .card-thumbnail img {
   min-width: 100%;
@@ -1560,7 +1562,7 @@ body {
   padding: 15px;
   display: flex;
   flex-direction: column;
-  min-height: 350px;
+  min-height: 280px;
 }
 #__next .blog .container .cards .card .card-txt .link {
   color: #171E49;
@@ -1665,6 +1667,9 @@ body {
 #__next .offres-page .logements-list a:hover {
   color: #303030;
 }
+#__next .offres-page .logements-list .col-12 {
+  margin-bottom: 30px;
+}
 #__next .offres-page .logements-list .card {
   height: 100%;
 }
@@ -1767,6 +1772,66 @@ body {
   justify-content: center;
   padding: 30px 15px;
 }
+@media screen and (max-width: 425px) {
+  #__next .logement-page {
+    padding: 0 0 60px;
+  }
+  #__next .logement-page .container .row {
+    flex-direction: column-reverse;
+  }
+  #__next .logement-page .txt-container {
+    padding-right: 0px;
+  }
+  #__next .logement-page .txt-container .subtitle {
+    font-size: 18px;
+    color: #606060;
+  }
+  #__next .logement-page .txt-container .type {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+  }
+  #__next .logement-page .txt-container h3.title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  #__next .logement-page .txt-container .tags {
+    display: flex;
+    justify-content: space-between;
+    max-width: 450px;
+    padding-top: 15px;
+  }
+  #__next .logement-page .txt-container .tags p {
+    padding: 6px 12px;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-size: 14px;
+  }
+  #__next .logement-page .slider-container {
+    height: 100%;
+  }
+  #__next .logement-page .slider-container .swiper {
+    margin-bottom: 30px;
+  }
+  #__next .logement-page .slider-container .swiper .swiper-wrapper .swiper-slide img {
+    max-height: 250px;
+  }
+  #__next .logement-page .slider-container .swiper .swiper-button-prev::after, #__next .logement-page .slider-container .swiper .swiper-button-next::after {
+    color: #FFF;
+  }
+  #__next .logement-page .slider-container .swiper .swiper-button-prev {
+    left: 25px;
+  }
+  #__next .logement-page .slider-container .swiper .swiper-button-next {
+    right: 25px;
+  }
+  #__next .logement-page .col-contact {
+    display: flex;
+    justify-content: center;
+    padding: 30px 15px;
+  }
+}
 #__next .login-page {
   padding: 90px 0;
   height: 60vh;
@@ -1795,7 +1860,7 @@ body {
 #__next .login-page .container form input {
   width: 100%;
   padding: 15px 25px;
-  border-radius: 30px;
+  border-radius: 5px;
   border: 1px solid #e7e7e7;
   font-size: 16px;
   color: #666;
@@ -1844,7 +1909,7 @@ body {
 #__next .registration .container {
   padding: 50px;
   border: 1px solid #eee;
-  border-radius: 30px;
+  border-radius: 5px;
   max-width: 80vw;
   display: flex;
   flex-direction: column;
@@ -1887,7 +1952,7 @@ body {
   transform: translateX(20px);
   width: 250px;
   padding: 15px 25px;
-  border-radius: 30px;
+  border-radius: 5px;
   border: 1px solid #e7e7e7;
   font-size: 16px;
   color: #666;
@@ -1901,7 +1966,7 @@ body {
 }
 #__next .registration .container .registration-form form .btn {
   transform: translateX(-20px);
-  max-height: 50px;
+  max-height: 56px;
 }
 #__next .registration .container .registration-form form .btn:disabled {
   opacity: 0.7;
@@ -1988,6 +2053,27 @@ body {
     opacity: 0.7;
     cursor: not-allowed;
   }
+}
+#__next .espace-client-page {
+  padding-bottom: 90px;
+}
+#__next .espace-client-page .espace-client .title-container .col-12 {
+  border: 1px solid #e7e7e7;
+  border-radius: 5px;
+  padding: 30px;
+  margin-top: 90px;
+  margin-bottom: 90px;
+}
+#__next .espace-client-page .espace-client .title-container .col-12 .title {
+  font-size: 42px;
+  margin-bottom: 30px;
+}
+#__next .espace-client-page .espace-client .title-container .col-12 .description {
+  font-size: 18px;
+}
+#__next .espace-client-page .espace-client .visites-container .visites-list {
+  display: flex;
+  flex-direction: column;
 }
 #__next .legal {
   display: flex;
@@ -2098,7 +2184,7 @@ body {
   width: 30%;
   max-width: 30%;
   border: 1px solid #eee;
-  border-radius: 30px;
+  border-radius: 5px;
   padding: 30px;
   -webkit-box-sizing: border-box;
   /* Safari/Chrome, other WebKit */
@@ -2206,8 +2292,8 @@ body {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
-  padding: 15px 25px;
-  border-radius: 30px;
+  padding: 15px;
+  border-radius: 5px;
   border: 1px solid #e7e7e7;
   font-size: 16px;
   color: #666;

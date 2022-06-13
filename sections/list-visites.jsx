@@ -41,24 +41,26 @@ function VisitesList({user}) {
     const links = visites.map(function(link) {
         if (link) {
             return (
-                <li key={link.id}>
-                    <Link key={link.id} href={`/visite/${encodeURIComponent(link.id)}`}>
-                        <a>
-                            {link.title}
-                        </a>
-                    </Link>
-                </li>
+                <Link key={link.id} href={`/visite/${encodeURIComponent(link.id)}`}>
+                    <a>
+                        {link.title}
+                    </a>
+                </Link>
             )
         }
     })
 
     return (
-        <>
-            <p>visites list</p>
-            <ul>
-                { links }
-            </ul>
-        </>
+        <Container>
+            <Row>
+                <Col>
+                    <h2 className="title">Liste des visites</h2>
+                    <div className="visites-list">
+                        { links }
+                    </div>
+                </Col>
+            </Row>
+        </Container>
     )
 }
 
