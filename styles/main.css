@@ -2071,9 +2071,44 @@ body {
 #__next .espace-client-page .espace-client .title-container .col-12 .description {
   font-size: 18px;
 }
+#__next .espace-client-page .espace-client .visites-container .title {
+  font-size: 24px;
+}
 #__next .espace-client-page .espace-client .visites-container .visites-list {
   display: flex;
   flex-direction: column;
+}
+#__next .espace-client-page .espace-client .visites-container .visites-list .col-12 {
+  padding-left: 0;
+  padding-right: 0;
+}
+#__next .espace-client-page .espace-client .visites-container .visites-list a:hover {
+  color: #303030;
+}
+#__next .espace-client-page .espace-client .visites-container .visites-list .card {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+}
+#__next .espace-client-page .espace-client .visites-container .visites-list .card .txt-container {
+  width: 50%;
+  padding: 15px;
+}
+#__next .espace-client-page .espace-client .visites-container .visites-list .card .txt-container .title {
+  margin-bottom: 30px;
+}
+#__next .espace-client-page .espace-client .visites-container .visites-list .card .txt-container .description {
+  font-size: 16px;
+}
+#__next .espace-client-page .espace-client .visites-container .visites-list .card .img-container {
+  width: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#__next .espace-client-page .espace-client .visites-container .visites-list .card .img-container img {
+  max-height: 350px;
 }
 #__next .legal {
   display: flex;

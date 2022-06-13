@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button'
+import Markdown from 'markdown-to-jsx'
 
 function VisitesList({user}) {
     const [data, setData] = useState(null)
@@ -38,14 +38,24 @@ function VisitesList({user}) {
     })
     console.log('visites :', visites)
 
-    const links = visites.map(function(link) {
-        if (link) {
+    const visitesList = visites.map(function(visite) {
+        if (visite) {
             return (
-                <Link key={link.id} href={`/visite/${encodeURIComponent(link.id)}`}>
-                    <a>
-                        {link.title}
-                    </a>
-                </Link>
+                <Col key={visite.id} xs={12} sm={10} md={9}>
+                    <Link href={`/visite/${encodeURIComponent(visite.id)}`}>
+                        <a>
+                            <div className="card">
+                                <div className="txt-container">
+                                    <h2 className="title">{visite.title}</h2>
+                                    <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{visite.description}</Markdown>
+                                </div>
+                                <div className="img-container">
+                                    <img src={visite.cover.url} alt="cover img" />
+                                </div>
+                            </div>
+                        </a>
+                    </Link>
+                </Col>
             )
         }
     })
@@ -54,9 +64,12 @@ function VisitesList({user}) {
         <Container>
             <Row>
                 <Col>
-                    <h2 className="title">Liste des visites</h2>
                     <div className="visites-list">
-                        { links }
+                        <Container>
+                            <Row className="justify-content-center">
+                                { visitesList }
+                            </Row>
+                        </Container>
                     </div>
                 </Col>
             </Row>

@@ -2651,7 +2651,7 @@ body {
 
     .espace-client-page {
         padding-bottom: 90px;
-        
+
         .espace-client {
             .title-container .col-12 {
                 border: 1px solid #e7e7e7;
@@ -2671,11 +2671,52 @@ body {
 
             .visites-container {
                 .title {
-
+                    font-size: 24px;
                 }
                 .visites-list {
                     display: flex;
                     flex-direction: column;
+
+                    .col-12 {
+                        padding-left: 0;
+                        padding-right: 0;
+                    }
+                    
+                    a {
+                        &:hover {
+                            color: #303030;
+                        }
+                    }
+
+                    .card {
+                        display: flex;
+                        flex-direction: row;
+                        margin-bottom: 30px;
+
+                        .txt-container {
+                            width: 50%;
+                            padding: 15px;
+
+                            .title {
+                                margin-bottom: 30px;
+                            }
+
+                            .description {
+                                font-size: 16px;
+                            }
+                        }
+                        .img-container {
+                            width: 50%;
+                            overflow: hidden;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            img {
+                                max-height: 350px;
+                            }
+                        }
+                    }
                 }
             }
         }
