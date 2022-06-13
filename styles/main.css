@@ -1696,12 +1696,25 @@ body {
   border: 1px solid #000;
   border-radius: 3px;
 }
+@media screen and (max-width: 425px) {
+  #__next .offres-page {
+    padding: 60px 0;
+  }
+  #__next .offres-page .title-container .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  #__next .offres-page .logements-list .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 15px;
+  }
+  #__next .offres-page .logements-list .card .card-body .tags p {
+    font-size: 12px;
+  }
+}
 #__next .logement-page {
   padding: 90px 0;
-}
-#__next .logement-page .col-12 {
-  height: 100%;
-  overflow: visible;
 }
 #__next .logement-page .txt-container {
   padding-right: 90px;
@@ -1732,17 +1745,21 @@ body {
   border-radius: 3px;
   font-size: 14px;
 }
-#__next .logement-page .swiper {
-  position: sticky;
-  top: 0;
+#__next .logement-page .slider-container {
+  height: 100%;
 }
-#__next .logement-page .swiper .swiper-button-prev::after, #__next .logement-page .swiper .swiper-button-next::after {
+#__next .logement-page .slider-container .swiper {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+}
+#__next .logement-page .slider-container .swiper .swiper-button-prev::after, #__next .logement-page .slider-container .swiper .swiper-button-next::after {
   color: #FFF;
 }
-#__next .logement-page .swiper .swiper-button-prev {
+#__next .logement-page .slider-container .swiper .swiper-button-prev {
   left: 25px;
 }
-#__next .logement-page .swiper .swiper-button-next {
+#__next .logement-page .slider-container .swiper .swiper-button-next {
   right: 25px;
 }
 #__next .logement-page .col-contact {

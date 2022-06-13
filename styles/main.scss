@@ -2193,13 +2193,45 @@ body {
 
     }
 
+    @media screen and (max-width:425px) {
+
+        .offres-page {
+            padding: 60px 0;
+    
+            .title-container {
+                .title {
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                }
+            }
+    
+            .logements-list {
+                .col-12 {
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-bottom: 15px;
+                }
+                .card {
+                    .card-body {
+                        .tags {
+    
+                            p {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .logement-page {
         padding: 90px 0;
 
-        .col-12 {
-            height: 100%;
-            overflow: visible;
-        }
+        // .col-12 {
+        //     height: 100%;
+        //     overflow: visible;
+        // }
 
         .txt-container {
             padding-right: 90px;
@@ -2232,21 +2264,27 @@ body {
             }
         }
 
-        .swiper {
-            position: sticky;
-            top: 0;
+        .slider-container {
+            height: 100%;
 
-            .swiper-button-prev, .swiper-button-next {
-                &::after {
-                    color: #FFF;
+            .swiper {
+                position: -webkit-sticky;
+                position: sticky;
+                bottom: 0;
+    
+                .swiper-button-prev, .swiper-button-next {
+                    &::after {
+                        color: #FFF;
+                    }
+                }
+                .swiper-button-prev {
+                    left: 25px;
+                }
+                .swiper-button-next {
+                    right: 25px;
                 }
             }
-            .swiper-button-prev {
-                left: 25px;
-            }
-            .swiper-button-next {
-                right: 25px;
-            }
+
         }
 
         .col-contact {

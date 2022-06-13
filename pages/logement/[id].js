@@ -22,8 +22,9 @@ const Logement = (props) => {
 
 
   return (
-      <Container className="logement-page">
-          <Row>
+      <div className="logement-page">
+        <Container>
+            <Row>
                 <Col xs={12} sm={5}>
                     <div className="txt-container">
                         <h1 className="title">{logement.title}</h1>
@@ -45,24 +46,27 @@ const Logement = (props) => {
                     </div>
                 </Col>
                 <Col xs={12} sm={7}>
-                    <Swiper
-                        spaceBetween={50}
-                        slidesPerView={1}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
-                        navigation={true} modules={[Navigation]}
-                        >
-                        <SwiperSlide key="cover"><img src={logement.cover.url} /></SwiperSlide>
-                        {slider}
-                    </Swiper>
+                    <div className="slider-container">
+                        <Swiper
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            onSlideChange={() => console.log('slide change')}
+                            onSwiper={(swiper) => console.log(swiper)}
+                            navigation={true} modules={[Navigation]}
+                            >
+                            <SwiperSlide key="cover"><img src={logement.cover.url} /></SwiperSlide>
+                            {slider}
+                        </Swiper>
+                    </div>
                 </Col>
-          </Row>
-          <Row>
-              <Col xs={12} className="col-contact">
-                  <a href="mailto:karim@badwork.fr" className="btn">Contactez-nous</a>
-              </Col>
-          </Row>
-      </Container>
+            </Row>
+            <Row>
+                <Col xs={12} className="col-contact">
+                    <a href="mailto:karim@badwork.fr" className="btn">Contactez-nous</a>
+                </Col>
+            </Row>
+        </Container>
+      </div>
   ) 
 }
 
