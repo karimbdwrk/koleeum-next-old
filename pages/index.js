@@ -15,9 +15,9 @@ export default function Home(props) {
   return (
     <div className="homepage">
       <Head>
-        <title>Koleeum.immo - Assets Management</title>
-        <meta name="description" content="Structuration de SCI, Investissement, Gestion d'actifs, Asset Management immobilier. Nous donnons accès à tous à l'Asset Management, service habituellement réservé aux investisseurs institutionnels." />
-        <link rel="icon" href="https://koleeum-aws-bucket.s3.eu-west-3.amazonaws.com/favicon_d3ad23822f.svg" />
+        <title>{props.home.SEO.meta_title}</title>
+        <meta name="description" content={props.home.SEO.meta_description} />
+        <meta name="robots" content={props.home.SEO.indexation ? "index, follow" : "noindex, nofollow"} />
       </Head>
       <div className="hero">
         <Container>

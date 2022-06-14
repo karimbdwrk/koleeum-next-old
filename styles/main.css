@@ -289,7 +289,7 @@ body {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 100%;
 }
 #__next #header nav a {
