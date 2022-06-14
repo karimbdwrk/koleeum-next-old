@@ -8,7 +8,10 @@ import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Markdown from 'markdown-to-jsx'
-import { DeprecatedLayoutGroupContext } from 'framer-motion';
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Navigation } from 'swiper'
+import 'swiper/css'
+import "swiper/css/navigation"
 
 const Visite = (props) => {
   const router = useRouter()
@@ -16,21 +19,8 @@ const Visite = (props) => {
 //   console.log(visite.error ? visite.error : visite.title)
 
   const [visite, setVisite] = useState(props.visite)
-    // visite.document.map(docu => {
-    //     console.log(docu.title)
-    // })
 
-//   console.log('get token :', getTokenFromServerCookie(req))
-//   console.log('get user :', getUserFromLocalCookie())
-
-//   const username = getUserFromLocalCookie()
-
-//   const [numPages, setNumPages] = useState(null);
-//   const [pageNumber, setPageNumber] = useState(1);
-
-//   const onDocumentLoadSuccess = () => {
-//       console.log('load sucess pdf !')
-//   }
+  const slider = visite.photos.map(photo => <SwiperSlide key={photo.id}><img src={photo.url} /></SwiperSlide>)
 
     const list = visite.document.map(function(docu) {
         return (
@@ -43,40 +33,41 @@ const Visite = (props) => {
         )
     })
 
-  return (
-      <Container className="visite-page">
-          <Row>
-              <Col xs={12}>
-                    {/* <p>Visite: {id}</p> */}
-                    <h1 className="title">{visite.title}</h1>
-                    <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{visite.description}</Markdown>
-                    <Container className="list-visites">
+    return (
+        <Container className="visite-page">
+            <Row>
+                <Col xs={12} sm={5}>
+                    <div className="txt-container">
+                        <h1 className="title">{visite.title}</h1>
+                        <Markdown options={{ wrapper: 'div', forceWrapper: true }} className="description">{visite.description}</Markdown>
+                    </div>
+                </Col>
+                <Col xs={12} sm={7}>
+                    <div className="slider-container">
+                        <Swiper
+                            spaceBetween={50}
+                            slidesPerView={1}
+                            onSlideChange={() => console.log('slide change')}
+                            onSwiper={(swiper) => console.log(swiper)}
+                            navigation={true} modules={[Navigation]}
+                            >
+                            {slider}
+                        </Swiper>
+                    </div>
+                </Col>
+            </Row>
+            <Row className="justify-content-center">
+                <Col xs={12} sm={10}>
+                    <div className="list-docs">
                         {list}
-                    </Container>
-                    {/* <p>Page {pageNumber} of {numPages}</p> */}
-              </Col>
-          </Row>
-      </Container>
-  ) 
+                    </div>
+                </Col>
+            </Row>
+        </Container>
+    ) 
 }
 
 export default Visite
-
-// export async function getStaticPaths() {
-//     const res = await fetch('https://koleeum-admin.herokuapp.com/visites')
-//     const data = await res.json()
-
-//     const paths = data.map(visite => {
-//         return {
-//             params: { id: visite.id.toString() }
-//         }
-//     })
-
-//     return {
-//         paths,
-//         fallback: false
-//     }
-// }
 
 export async function getServerSideProps({req, params}) {
     const id = params.id
@@ -86,8 +77,6 @@ export async function getServerSideProps({req, params}) {
             Authorization: `Bearer ${jwt}`,
         },
     } : '')
-    // const res = await fetch(`https://koleeum-admin.herokuapp.com/visites/${id}`)
-    // const data = await res
 
     return {
         props: { visite: data }

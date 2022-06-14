@@ -149,11 +149,6 @@ html {
 }
 
 /* GENERAL */
-.container {
-  max-width: 1400px;
-  width: 100%;
-}
-
 .btn, a.btn {
   cursor: pointer;
   background-color: #4270ED !important;
@@ -2110,6 +2105,133 @@ body {
 #__next .espace-client-page .espace-client .visites-container .visites-list .card .img-container img {
   max-height: 350px;
 }
+@media screen and (max-width: 425px) {
+  #__next .espace-client-page {
+    padding-bottom: 60px;
+  }
+  #__next .espace-client-page .espace-client .title-container .col-12 {
+    border: 0px solid #e7e7e7;
+    padding: 0px 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  #__next .espace-client-page .espace-client .title-container .col-12 .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  #__next .espace-client-page .espace-client .title-container .col-12 .description {
+    font-size: 16px;
+  }
+  #__next .espace-client-page .espace-client .visites-container {
+    margin-top: 30px;
+  }
+  #__next .espace-client-page .espace-client .visites-container .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #__next .espace-client-page .espace-client .visites-container .title {
+    font-size: 24px;
+  }
+  #__next .espace-client-page .espace-client .visites-container .visites-list {
+    display: flex;
+    flex-direction: column;
+  }
+  #__next .espace-client-page .espace-client .visites-container .visites-list .container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #__next .espace-client-page .espace-client .visites-container .visites-list .col-12 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #__next .espace-client-page .espace-client .visites-container .visites-list .card {
+    flex-direction: column;
+  }
+  #__next .espace-client-page .espace-client .visites-container .visites-list .card .txt-container {
+    width: 100%;
+    padding: 15px;
+  }
+  #__next .espace-client-page .espace-client .visites-container .visites-list .card .img-container {
+    width: 100%;
+  }
+  #__next .espace-client-page .espace-client .visites-container .visites-list .card .img-container img {
+    max-height: 260px;
+  }
+}
+#__next .visite-page {
+  padding: 90px 0;
+}
+#__next .visite-page .title {
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+#__next .visite-page .description {
+  font-size: 16px;
+}
+#__next .visite-page .slider-container .swiper .swiper-button-prev::after, #__next .visite-page .slider-container .swiper .swiper-button-next::after {
+  color: #FFF;
+}
+#__next .visite-page .slider-container .swiper .swiper-button-prev {
+  left: 25px;
+}
+#__next .visite-page .slider-container .swiper .swiper-button-next {
+  right: 25px;
+}
+#__next .visite-page .list-docs {
+  padding-top: 90px;
+}
+#__next .visite-page .list-docs .title {
+  font-size: 22px;
+}
+#__next .visite-page .list-docs iframe {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 425px) {
+  #__next .visite-page {
+    padding: 0 0 60px;
+  }
+  #__next .visite-page .txt-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  #__next .visite-page .txt-container .title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  #__next .visite-page .txt-container .description {
+    font-size: 16px;
+  }
+  #__next .visite-page .slider-container {
+    padding: 30px 15px;
+  }
+  #__next .visite-page .slider-container .swiper .swiper-wrapper .swiper-slide {
+    display: flex;
+    justify-content: center;
+  }
+  #__next .visite-page .slider-container .swiper .swiper-wrapper .swiper-slide img {
+    max-height: 275px;
+  }
+  #__next .visite-page .slider-container .swiper .swiper-button-prev::after, #__next .visite-page .slider-container .swiper .swiper-button-next::after {
+    color: #FFF;
+  }
+  #__next .visite-page .slider-container .swiper .swiper-button-prev {
+    left: 25px;
+  }
+  #__next .visite-page .slider-container .swiper .swiper-button-next {
+    right: 25px;
+  }
+  #__next .visite-page .list-docs {
+    padding: 0px 15px;
+  }
+  #__next .visite-page .list-docs .title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  #__next .visite-page .list-docs iframe {
+    margin-bottom: 30px;
+    height: 550px;
+  }
+}
 #__next .legal {
   display: flex;
   flex-direction: column;
@@ -2128,7 +2250,7 @@ body {
 }
 #__next .legal .container .title {
   font-size: 42px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 #__next .legal .container .text-content {
   font-size: 18px;

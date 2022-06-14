@@ -168,11 +168,6 @@ $dark-color: #171E49;
 
 /* GENERAL */
 
-.container {
-    max-width: 1400px;
-    width: 100%;
-}
-
 .btn, a.btn {
     cursor: pointer;
     background-color: #4270ED!important;
@@ -2681,7 +2676,7 @@ body {
                         padding-left: 0;
                         padding-right: 0;
                     }
-                    
+
                     a {
                         &:hover {
                             color: #303030;
@@ -2722,6 +2717,188 @@ body {
         }
     }
 
+    @media screen and (max-width:425px) {
+
+        .espace-client-page {
+            padding-bottom: 60px;
+    
+            .espace-client {
+                .title-container .col-12 {
+                    border: 0px solid #e7e7e7;
+                    padding: 0px 15px;
+                    margin-top: 0px;
+                    margin-bottom: 0px;
+    
+                    .title {
+                        font-size: 24px;
+                        margin-bottom: 30px;
+                    }
+                    .description {
+                        font-size: 16px;
+                    }
+                }
+    
+                .visites-container {
+                    margin-top: 30px;
+
+                    .container {
+                        padding-left: 15px;
+                        padding-right: 15px;
+                    }
+
+                    .title {
+                        font-size: 24px;
+                    }
+
+                    .visites-list {
+                        display: flex;
+                        flex-direction: column;
+
+                        .container {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+    
+                        .col-12 {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+    
+                        .card {
+                            flex-direction: column;
+    
+                            .txt-container {
+                                width: 100%;
+                                padding: 15px;
+                            }
+                            .img-container {
+                                width: 100%;
+    
+                                img {
+                                    max-height: 260px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .visite-page {
+        padding: 90px 0;
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            font-size: 16px;
+        }
+
+        .slider-container {
+
+            .swiper {
+    
+                .swiper-button-prev, .swiper-button-next {
+                    &::after {
+                        color: #FFF;
+                    }
+                }
+                .swiper-button-prev {
+                    left: 25px;
+                }
+                .swiper-button-next {
+                    right: 25px;
+                }
+            }
+
+        }
+
+        .list-docs {
+            padding-top: 90px;
+
+            .title {
+                font-size: 22px;
+            }
+
+            iframe {
+                margin-bottom: 60px;
+            }
+        }
+    }
+
+    @media screen and (max-width:425px) {
+
+        .visite-page {
+            padding: 0 0 60px;
+
+            .txt-container {
+                padding-left: 15px;
+                padding-right: 15px;
+    
+                .title {
+                    font-size: 24px;
+                    margin-bottom: 30px;
+                }
+        
+                .description {
+                    font-size: 16px;
+                }
+
+            }
+    
+            .slider-container {
+                padding: 30px 15px;
+    
+                .swiper {
+
+                    .swiper-wrapper {
+
+                        .swiper-slide {
+                            display: flex;
+                            justify-content: center;
+
+                            img {
+                                max-height: 275px;
+                            }
+                        }
+
+                    }
+        
+                    .swiper-button-prev, .swiper-button-next {
+                        &::after {
+                            color: #FFF;
+                        }
+                    }
+                    .swiper-button-prev {
+                        left: 25px;
+                    }
+                    .swiper-button-next {
+                        right: 25px;
+                    }
+                }
+    
+            }
+    
+            .list-docs {
+                padding: 0px 15px;
+    
+                .title {
+                    font-size: 22px;
+                    margin-bottom: 15px;
+                }
+    
+                iframe {
+                    margin-bottom: 30px;
+                    height: 550px;
+                }
+            }
+        }
+    }
+
     // PAGE MENTIONS LÉGALES
 
     .legal {
@@ -2743,7 +2920,7 @@ body {
 
             .title {
                 font-size: 42px;
-                margin-bottom: 30px;
+                margin-bottom: 15px;
                 // text-align: center;
             }
 
