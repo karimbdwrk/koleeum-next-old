@@ -427,6 +427,12 @@ body {
                     span {
                         display: none;
                     }
+
+                    &.login-btn {
+                        &:before {
+                            display: none;
+                        }
+                    }
                 }
 
                 #burger {

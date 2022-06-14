@@ -378,6 +378,9 @@ body {
   #__next #header .login-container .btn span {
     display: none;
   }
+  #__next #header .login-container .btn.login-btn:before {
+    display: none;
+  }
   #__next #header .login-container #burger {
     display: block;
     background-color: transparent;
