@@ -1,18 +1,11 @@
 module.exports = {
   reactStrictMode: true,
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
   images: {
     domains: ['koleeum-aws-bucket.s3.eu-west-3.amazonaws.com'],
   }
 }
-
-// module.exports = {
-//   async redirects() {
-//     return [
-//       {
-//         source: '/visite/:slug(\\d{1,})',
-//         destination: '/:slug', // Matched parameters can be used in the destination
-//         permanent: false,
-//       },
-//     ]
-//   },
-// }
